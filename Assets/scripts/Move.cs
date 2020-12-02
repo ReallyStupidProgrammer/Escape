@@ -8,16 +8,16 @@ public class Move : MonoBehaviour
     int Speed = 1;
 
     void MoveForward() {
-        transform.Translate(Vector3.forward * Time.deltaTime * Speed);
+        transform.Translate(transform.TransformDirection(Vector3.forward) * Time.deltaTime * Speed);
     }
     void MoveBack() { 
         transform.Translate(Vector3.forward * Time.deltaTime * -Speed) ;
     }
     void MoveLeft() { 
-        transform.Translate(Vector3.left * Time.deltaTime * Speed);
+        transform.Translate(Vector3.right * Time.deltaTime * -Speed);
     }
     void MoveRight() {
-        transform.Translate(Vector3.right * Time.deltaTime * -Speed);
+        transform.Translate(Vector3.right * Time.deltaTime * Speed);
     }
     // void Lrotate() {
     //     transform.Rotate(Vector3.up * Time.deltaTime * Speed); 
@@ -46,10 +46,11 @@ public class Move : MonoBehaviour
             Debug.Log("D");
         }
         if (Input.GetMouseButton(1)) {
-            float mouseX = Input.GetAxis("Mouse X");
-            float mouseY = Input.GetAxis("Mouse Y");
-            transform.Rotate(-mouseY, 0, 0);
-            transform.Rotate(0, mouseX, 0);
+            float mouseX = Input.GetAxis("Mouse X") * 3;
+            float mouseY = Input.GetAxis("Mouse Y") * 3;
+            transform.Rotate(-mouseY, 0, 0, Space.Self);
+            transform.Rotate(0, mouseX, 0, Space.World);
+            //transform.Rotate(0, mouseX, 0);
         }
         // if (Input.GetKey(KeyCode.Q)) {
         //     //Lrotate();
