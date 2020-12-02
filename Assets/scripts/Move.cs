@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Move : MonoBehaviour
-{
-
+public class Move : MonoBehaviour {
     int Speed = 1;
 
     void MoveForward() {
-        transform.Translate(transform.TransformDirection(Vector3.forward) * Time.deltaTime * Speed);
+        transform.Translate(Vector3.forward * Time.deltaTime * Speed);
     }
     void MoveBack() { 
         transform.Translate(Vector3.forward * Time.deltaTime * -Speed) ;
@@ -19,16 +17,9 @@ public class Move : MonoBehaviour
     void MoveRight() {
         transform.Translate(Vector3.right * Time.deltaTime * Speed);
     }
-    // void Lrotate() {
-    //     transform.Rotate(Vector3.up * Time.deltaTime * Speed); 
-    // }
-    // void Rrotate() {
-    //     transform.Rotate(Vector3.up * Time.deltaTime * -Speed);
-    // }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         if (Input.GetKey(KeyCode.W)) {
             MoveForward();
             Debug.Log("W");
@@ -47,18 +38,7 @@ public class Move : MonoBehaviour
         }
         if (Input.GetMouseButton(1)) {
             float mouseX = Input.GetAxis("Mouse X") * 3;
-            float mouseY = Input.GetAxis("Mouse Y") * 3;
-            transform.Rotate(-mouseY, 0, 0, Space.Self);
             transform.Rotate(0, mouseX, 0, Space.World);
-            //transform.Rotate(0, mouseX, 0);
         }
-        // if (Input.GetKey(KeyCode.Q)) {
-        //     //Lrotate();
-        //     Debug.Log("Q");
-        // }
-        // if (Input.GetKey(KeyCode.E)) {
-        //     //Rrotate();
-        //     Debug.Log("E");
-        // }
     }
 }
