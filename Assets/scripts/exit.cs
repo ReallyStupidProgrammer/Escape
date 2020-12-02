@@ -5,6 +5,8 @@ using UnityEngine;
 public class exit : MonoBehaviour
 {
     public void Quit() {
-        UnityEditor.EditorApplication.isPlaying = false;
+        // UnityEditor.EditorApplication.isPlaying = false;
+        Application.Quit();
+        Debug.Log("deqadaesf");
     }
 }
