@@ -29,7 +29,7 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.W)) {
+        if (Input.GetKey(KeyCode.W)) {
             MoveForward();
             Debug.Log("W");
         }
@@ -37,13 +37,19 @@ public class Move : MonoBehaviour
             MoveLeft();
             Debug.Log("A");
         }
-        if(Input.GetKey(KeyCode.S)) {
+        if (Input.GetKey(KeyCode.S)) {
             MoveBack();
             Debug.Log("S");
         }
-        if(Input.GetKey(KeyCode.D)) {
+        if (Input.GetKey(KeyCode.D)) {
             MoveRight();
             Debug.Log("D");
+        }
+        if (Input.GetMouseButton(1)) {
+            float mouseX = Input.GetAxis("Mouse X");
+            float mouseY = Input.GetAxis("Mouse Y");
+            transform.Rotate(-mouseY, 0, 0);
+            transform.Rotate(0, mouseX, 0);
         }
         // if (Input.GetKey(KeyCode.Q)) {
         //     //Lrotate();
