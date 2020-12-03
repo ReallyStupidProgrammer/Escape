@@ -3,19 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Move : MonoBehaviour {
-    int Speed = 1;
+    int Speed = 3;
+    private CharacterController controller;
+
+    void Start() {
+        controller = gameObject.GetComponent<CharacterController>();
+    }
 
     void MoveForward() {
-        transform.Translate(Vector3.forward * Time.deltaTime * Speed);
+        controller.Move(transform.forward * Time.deltaTime * Speed);
     }
     void MoveBack() { 
-        transform.Translate(Vector3.forward * Time.deltaTime * -Speed) ;
+        controller.Move(transform.forward * Time.deltaTime * -Speed) ;
     }
     void MoveLeft() { 
-        transform.Translate(Vector3.right * Time.deltaTime * -Speed);
+        controller.Move(transform.right * Time.deltaTime * -Speed);
     }
     void MoveRight() {
-        transform.Translate(Vector3.right * Time.deltaTime * Speed);
+        controller.Move(transform.right * Time.deltaTime * Speed);
     }
 
     // Update is called once per frame
