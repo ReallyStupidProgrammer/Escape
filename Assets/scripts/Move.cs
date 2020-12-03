@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Move : MonoBehaviour {
-    int Speed = 3;
+    public int Speed = 3;
     private CharacterController controller;
 
     void Start() {
@@ -25,22 +25,26 @@ public class Move : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (Input.GetKey(KeyCode.W)) {
-            MoveForward();
-            Debug.Log("W");
-        }
-        if (Input.GetKey(KeyCode.A)) {
-            MoveLeft();
-            Debug.Log("A");
-        }
-        if (Input.GetKey(KeyCode.S)) {
-            MoveBack();
-            Debug.Log("S");
-        }
-        if (Input.GetKey(KeyCode.D)) {
-            MoveRight();
-            Debug.Log("D");
-        }
+        // if (Input.GetKey(KeyCode.W)) {
+        //     MoveForward();
+        //     Debug.Log("W");
+        // }
+        // if (Input.GetKey(KeyCode.A)) {
+        //     MoveLeft();
+        //     Debug.Log("A");
+        // }
+        // if (Input.GetKey(KeyCode.S)) {
+        //     MoveBack();
+        //     Debug.Log("S");
+        // }
+        // if (Input.GetKey(KeyCode.D)) {
+        //     MoveRight();
+        //     Debug.Log("D");
+        // }
+        
+        var dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        controller.Move(transform.rotation * dir * (Speed * Time.deltaTime));
+        
         if (Input.GetMouseButton(1)) {
             float mouseX = Input.GetAxis("Mouse X") * 3;
             transform.Rotate(0, mouseX, 0, Space.World);
