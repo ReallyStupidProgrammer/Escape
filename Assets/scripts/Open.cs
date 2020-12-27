@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Open : MonoBehaviour
 {
-    int angle = 0;
     IEnumerator coroutine;
 
     IEnumerator rotate() {
-        int angle = 0;
-        while (angle < 90) {
+        print(transform.localEulerAngles);
+        while (transform.localEulerAngles.y < 180) {
             yield return null;
             transform.Rotate(0, 1, 0);
-            angle += 1;
         }
     }
     public void open() {
