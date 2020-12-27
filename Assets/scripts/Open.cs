@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class Open : MonoBehaviour
 {
-    public void Open() {
-        
-        //if (OnMouseDown() && (true)) {
-            Destroy(this.gameObject);
-        //}
+    int angle = 0;
+    IEnumerator coroutine;
+
+    IEnumerator rotate() {
+        int angle = 0;
+        while (angle < 90) {
+            yield return null;
+            transform.Rotate(0, 1, 0);
+            angle += 1;
+        }
+    }
+    public void open() {
+        coroutine = rotate();
+        StartCoroutine(coroutine);
     }
 }
