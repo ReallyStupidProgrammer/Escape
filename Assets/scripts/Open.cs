@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Disappear : MonoBehaviour
+public class Open : MonoBehaviour
 {
     public void Open() {
         
