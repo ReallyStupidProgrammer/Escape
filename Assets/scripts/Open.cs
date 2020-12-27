@@ -7,14 +7,19 @@ public class Open : MonoBehaviour
     IEnumerator coroutine;
 
     IEnumerator rotate() {
-        print(transform.localEulerAngles);
         while (transform.localEulerAngles.y < 180) {
             yield return null;
-            transform.Rotate(0, 1, 0);
+            if (Input.GetMouseButton(0)) {
+                float mouseX = Input.GetAxis("Mouse X") * 3;
+                transform.Rotate(0, mouseX, 0, Space.World);
+            }
         }
     }
     public void open() {
-        coroutine = rotate();
-        StartCoroutine(coroutine);
+        if (gameObject.tag == "unlocked") {
+            coroutine = rotate();
+            StartCoroutine(coroutine);
+        }
     }
+
 }

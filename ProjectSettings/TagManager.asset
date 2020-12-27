@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - locked
+  - unlocked
+  - unshowed
+  - showed
   layers:
   - Default
   - TransparentFX
