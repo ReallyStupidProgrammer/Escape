@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Open : MonoBehaviour
+public class Door : MonoBehaviour
 {
     IEnumerator coroutine;
 
@@ -15,8 +15,10 @@ public class Open : MonoBehaviour
             }
         }
     }
-    public void open() {
+
+    public void Update() {
         if (gameObject.tag == "unlocked") {
+            gameObject.tag = "opened";
             coroutine = rotate();
             StartCoroutine(coroutine);
         }

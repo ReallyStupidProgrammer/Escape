@@ -8,6 +8,8 @@ TagManager:
   - unlocked
   - unshowed
   - showed
+  - keyFound
+  - opened
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - invisible
   - 
   - 
   - 
