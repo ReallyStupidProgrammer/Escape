@@ -16,15 +16,22 @@ public class Message : MonoBehaviour
     }
 
     public void showMessage(string doorName) {
-        GameObject door = GameObject.Find(doorName);
-        if (check(door.tag, gameObject.name)) {
+        if (doorName != "") {
+            GameObject door = GameObject.Find(doorName);
+            if (check(door.tag, gameObject.name)) {
+                gameObject.SetActive(true);
+                coroutine = message();
+                StartCoroutine(coroutine);
+                if (door.tag == "keyFound") {
+                    door.tag = "unlocked";
+                }
+            }
+        } else {
             gameObject.SetActive(true);
             coroutine = message();
             StartCoroutine(coroutine);
-            if (door.tag == "keyFound") {
-                door.tag = "unlocked";
-            }
         }
+
 
     }
 }
