@@ -21,6 +21,7 @@ public class Door : MonoBehaviour
                 gameObject.tag = "opened";
                 Rigidbody current = transform.GetComponent<Rigidbody>();
                 current.velocity = Vector3.zero;
+                current.freezeRotation = true;
             }
         }
     }
