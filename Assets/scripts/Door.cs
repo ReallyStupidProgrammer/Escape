@@ -13,12 +13,14 @@ public class Door : MonoBehaviour
             if (Input.GetMouseButton(0)) {
                 float mouseX = Input.GetAxis("Mouse X") * 3;
                 //print(transform.localRotation.y);
-                print(mouseX);
+                //print(mouseX);
                 transform.Rotate(0, mouseX, 0, Space.World);
             }
             if (Quaternion.Angle(transform.localRotation, origin) >= 90) {
                 //print(transform.localRotation.y);
                 gameObject.tag = "opened";
+                Rigidbody current = transform.GetComponent<Rigidbody>();
+                current.velocity = Vector3.zero;
             }
         }
     }
@@ -26,7 +28,7 @@ public class Door : MonoBehaviour
     public void open() {
         if (gameObject.tag == "unlocked") {
             Quaternion origin = transform.localRotation;
-            print(origin);
+            //print(origin);
             coroutine = rotate(origin);
             StartCoroutine(coroutine);
         }
