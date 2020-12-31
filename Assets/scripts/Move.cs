@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Move : MonoBehaviour {
-    public int Speed = 3;
+    public int Speed = 300000;
     private CharacterController controller;
 
     void Start() {
