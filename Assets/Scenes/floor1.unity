@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 63340489}
   - component: {fileID: 63340488}
   m_Layer: 0
-  m_Name: left
+  m_Name: 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -281,13 +281,13 @@ MonoBehaviour:
         - m_Target: {fileID: 63340487}
           m_TargetAssemblyTypeName: Password, Assembly-CSharp
           m_MethodName: add
-          m_Mode: 1
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: drawer1
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!65 &63340489
@@ -623,8 +623,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0013666666, y: 0.009783537, z: 0.014653716}
-  m_Center: {x: -0.0003833334, y: -0.000030338058, z: -1.1641532e-10}
+  m_Size: {x: 0.00029692287, y: 0.009783537, z: 0.014653716}
+  m_Center: {x: 0.00015153862, y: -0.00003033797, z: -3.05697e-20}
 --- !u!114 &371454839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -772,13 +772,13 @@ MonoBehaviour:
         - m_Target: {fileID: 522875838}
           m_TargetAssemblyTypeName: Drawer, Assembly-CSharp
           m_MethodName: open
-          m_Mode: 1
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: 641
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &522875838
@@ -804,8 +804,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.019983804, y: 0.019999998, z: 0.019999998}
-  m_Center: {x: 0.000008101861, y: -9.800592e-17, z: -0.000000007817002}
+  m_Size: {x: 0.000290312, y: 0.019999998, z: 0.019999998}
+  m_Center: {x: -0.009838657, y: -9.800592e-17, z: -0.000000007817002}
 --- !u!1 &594288061
 GameObject:
   m_ObjectHideFlags: 0
@@ -1791,7 +1791,7 @@ GameObject:
   - component: {fileID: 901114577}
   - component: {fileID: 901114576}
   m_Layer: 0
-  m_Name: middle
+  m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1836,13 +1836,13 @@ MonoBehaviour:
         - m_Target: {fileID: 901114578}
           m_TargetAssemblyTypeName: Password, Assembly-CSharp
           m_MethodName: add
-          m_Mode: 1
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: drawer1
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!65 &901114577
@@ -2654,7 +2654,7 @@ GameObject:
   - component: {fileID: 1349353675}
   - component: {fileID: 1349353674}
   m_Layer: 0
-  m_Name: right
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2699,13 +2699,13 @@ MonoBehaviour:
         - m_Target: {fileID: 1349353676}
           m_TargetAssemblyTypeName: Password, Assembly-CSharp
           m_MethodName: add
-          m_Mode: 1
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: drawer1
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!65 &1349353675
@@ -4075,7 +4075,7 @@ GameObject:
   - component: {fileID: 522875838}
   m_Layer: 0
   m_Name: drawer1
-  m_TagString: unlocked
+  m_TagString: locked
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4251,6 +4251,8 @@ GameObject:
   - component: {fileID: 3185384847292253835}
   - component: {fileID: 1261401483814663995}
   - component: {fileID: 6881926667955761015}
+  - component: {fileID: 3513729505216300402}
+  - component: {fileID: 3513729505216300401}
   m_Layer: 0
   m_Name: closet
   m_TagString: Untagged
@@ -4258,6 +4260,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &3513729505216300401
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3513729505216300400}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.00021294043, z: 0.02}
+  m_Center: {x: 0, y: -0.009893535, z: -2.55368e-17}
+--- !u!65 &3513729505216300402
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3513729505216300400}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.00023622518, z: 0.02}
+  m_Center: {x: 0, y: 0.009881892, z: 2.5439854e-17}
 --- !u!1 &3578785842848089254
 GameObject:
   m_ObjectHideFlags: 0
@@ -4269,6 +4297,7 @@ GameObject:
   - component: {fileID: 2024481211251950585}
   - component: {fileID: 8107064272766522697}
   - component: {fileID: 8918611751402750985}
+  - component: {fileID: 3578785842848089255}
   m_Layer: 0
   m_Name: rightDoor
   m_TagString: Untagged
@@ -4276,6 +4305,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &3578785842848089255
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3578785842848089254}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00029687202, y: 0.009810628, z: 0.014653716}
+  m_Center: {x: 0.00015156406, y: 0.000043883723, z: 1.4336074e-19}
 --- !u!23 &4025120392980152128
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4563,13 +4605,70 @@ GameObject:
   - component: {fileID: 3118443176929251011}
   - component: {fileID: 5447444368735389117}
   - component: {fileID: 899179439386548147}
+  - component: {fileID: 7735164447122017518}
+  - component: {fileID: 7735164447122017517}
+  - component: {fileID: 7735164447122017516}
   m_Layer: 0
   m_Name: drawer2
-  m_TagString: Untagged
+  m_TagString: unlocked
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7735164447122017516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7735164447122017515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 619a80f9c6f8f2145ac91ca8f2b5c4ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &7735164447122017517
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7735164447122017515}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.021066664, y: 0.019999998, z: 0.019999998}
+  m_Center: {x: -0.00053333346, y: 0.0000000037252903, z: -0.000000007450581}
+--- !u!114 &7735164447122017518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7735164447122017515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7735164447122017516}
+          m_TargetAssemblyTypeName: Drawer, Assembly-CSharp
+          m_MethodName: open
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!33 &8012058990137714807
 MeshFilter:
   m_ObjectHideFlags: 0
