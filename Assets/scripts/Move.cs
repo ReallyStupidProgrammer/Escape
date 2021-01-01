@@ -24,24 +24,7 @@ public class Move : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() {
-        // if (Input.GetKey(KeyCode.W)) {
-        //     MoveForward();
-        //     Debug.Log("W");
-        // }
-        // if (Input.GetKey(KeyCode.A)) {
-        //     MoveLeft();
-        //     Debug.Log("A");
-        // }
-        // if (Input.GetKey(KeyCode.S)) {
-        //     MoveBack();
-        //     Debug.Log("S");
-        // }
-        // if (Input.GetKey(KeyCode.D)) {
-        //     MoveRight();
-        //     Debug.Log("D");
-        // }
-        
+    void Update() {       
         var dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         controller.Move(transform.rotation * dir * (Speed * Time.deltaTime));
         
