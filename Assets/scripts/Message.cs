@@ -11,27 +11,16 @@ public class Message : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    bool check(string doorTag, string name) {
-        return ((doorTag == "locked" && name == "noKey") || (doorTag == "keyFound" && name == "unlock"));
+    public void showMessage() {
+        gameObject.SetActive(true);
+        coroutine = message();
+        StartCoroutine(coroutine);
     }
 
-    public void showMessage(string doorName) {
-        if (doorName != "") {
-            GameObject door = GameObject.Find(doorName);
-            if (check(door.tag, gameObject.name)) {
-                gameObject.SetActive(true);
-                coroutine = message();
-                StartCoroutine(coroutine);
-                if (door.tag == "keyFound") {
-                    door.tag = "unlocked";
-                }
-            }
-        } else {
-            gameObject.SetActive(true);
-            coroutine = message();
-            StartCoroutine(coroutine);
+    private void Update() {
+        print(Controller.message);
+        if (gameObject.name == Controller.message) {
+            showMessage();
         }
-
-
     }
 }

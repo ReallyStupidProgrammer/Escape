@@ -41,9 +41,6 @@ public class Drawer : MonoBehaviour
     }
 
     public void open() {
-        print(Pointer.getHit());
-        print(transform.position);
-        print("test");
         coroutine = drag();
         StartCoroutine(coroutine);
     }
