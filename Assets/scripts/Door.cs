@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    IEnumerator coroutine;
+    IEnumerator coroutine = null;
 
     IEnumerator rotate(Quaternion origin) {
         while ((Quaternion.Angle(transform.localRotation, origin) < 90)) {
@@ -33,6 +33,11 @@ public class Door : MonoBehaviour
             coroutine = rotate(origin);
             StartCoroutine(coroutine);
         }
+    }
+
+    public void stop() {
+        if (coroutine != null) StopCoroutine(coroutine);
+        coroutine = null;
     }
 
 }

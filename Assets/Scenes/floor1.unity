@@ -781,6 +781,22 @@ MonoBehaviour:
             m_StringArgument: 641
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 522875838}
+          m_TargetAssemblyTypeName: Drawer, Assembly-CSharp
+          m_MethodName: stop
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 641
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &522875838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1401,6 +1417,22 @@ MonoBehaviour:
         - m_Target: {fileID: 671018807}
           m_TargetAssemblyTypeName: Door, Assembly-CSharp
           m_MethodName: open
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 671018807}
+          m_TargetAssemblyTypeName: Door, Assembly-CSharp
+          m_MethodName: stop
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2316,18 +2348,6 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1188543231}
-          m_TargetAssemblyTypeName: Door, Assembly-CSharp
-          m_MethodName: open
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 1821258764}
           m_TargetAssemblyTypeName: Message, Assembly-CSharp
           m_MethodName: showMessage
@@ -2350,6 +2370,38 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: redDoor
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1188543231}
+          m_TargetAssemblyTypeName: Door, Assembly-CSharp
+          m_MethodName: open
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1188543231}
+          m_TargetAssemblyTypeName: Door, Assembly-CSharp
+          m_MethodName: stop
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &1249910728
@@ -3300,6 +3352,22 @@ MonoBehaviour:
             m_StringArgument: blueDoor
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1617264716}
+          m_TargetAssemblyTypeName: Door, Assembly-CSharp
+          m_MethodName: stop
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: blueDoor
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!65 &1617264712
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3642,6 +3710,7 @@ GameObject:
   - component: {fileID: 1854322192}
   - component: {fileID: 1854322191}
   - component: {fileID: 1854322193}
+  - component: {fileID: 1854322194}
   m_Layer: 0
   m_Name: cameraMovement
   m_TagString: Untagged
@@ -3695,6 +3764,18 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1854322194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854322190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76099b818989bbe4ca1a625cfea1ebce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1889699215
 GameObject:
   m_ObjectHideFlags: 0
@@ -4660,6 +4741,22 @@ MonoBehaviour:
         - m_Target: {fileID: 7735164447122017516}
           m_TargetAssemblyTypeName: Drawer, Assembly-CSharp
           m_MethodName: open
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7735164447122017516}
+          m_TargetAssemblyTypeName: Drawer, Assembly-CSharp
+          m_MethodName: stop
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

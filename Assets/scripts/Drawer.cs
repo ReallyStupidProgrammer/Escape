@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Drawer : MonoBehaviour
 {
-    IEnumerator coroutine;
+    IEnumerator coroutine = null;
     public static int[] password = {0, 0, 0};
     IEnumerator drag() {
         while (true) {
@@ -35,7 +35,15 @@ public class Drawer : MonoBehaviour
         }
     }
 
+    public void stop() {
+        if (coroutine != null) StopCoroutine(coroutine);
+        coroutine = null;
+    }
+
     public void open() {
+        print(Pointer.getHit());
+        print(transform.position);
+        print("test");
         coroutine = drag();
         StartCoroutine(coroutine);
     }
