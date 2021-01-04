@@ -22,7 +22,7 @@ public class Controller : MonoBehaviour
         } else if (door.tag == "keyFound") {
             message = "已开锁";
             messageColor = Color.green;
-            door.tag = "unlocked";
+            if (Input.GetMouseButtonUp(0)) door.tag = "unlocked";
         } else if (door.tag == "unlocked" && Input.GetMouseButton(0)) {
             door.GetComponent<Door>().open();
         }
@@ -34,13 +34,13 @@ public class Controller : MonoBehaviour
             if (!getHit()) return;
             current = hit.collider.gameObject;
         }
-        if (Input.GetMouseButtonUp(0)) {
-            current = null;
-        }
         if (current != null) {
             if (current.name.IndexOf("Door") > 0) {
                 doorOperation(current);
             }
+        }
+        if (Input.GetMouseButtonUp(0)) {
+            current = null;
         }
 
     }
