@@ -23,8 +23,14 @@ public class Controller : MonoBehaviour
             message = "已开锁";
             messageColor = Color.green;
             if (Input.GetMouseButtonUp(0)) door.tag = "unlocked";
-        } else if (door.tag == "unlocked" && Input.GetMouseButton(0)) {
+        } else if (door.tag == "unlocked") {
             door.GetComponent<Door>().open();
+        }
+    }
+
+    private void drawerOperation(GameObject drawer) {
+        if (drawer.tag == "unlocked") {
+            drawer.GetComponent<Drawer>().open();
         }
     }
     
@@ -35,8 +41,11 @@ public class Controller : MonoBehaviour
             current = hit.collider.gameObject;
         }
         if (current != null) {
-            if (current.name.IndexOf("Door") > 0) {
+            if (current.name.IndexOf("Door") >= 0) {
                 doorOperation(current);
+            }
+            if (current.name.IndexOf("drawer") >= 0) {
+                drawerOperation(current);
             }
         }
         if (Input.GetMouseButtonUp(0)) {

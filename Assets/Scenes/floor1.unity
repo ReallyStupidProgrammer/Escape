@@ -695,51 +695,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &522875837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 930622131715871835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 522875838}
-          m_TargetAssemblyTypeName: Drawer, Assembly-CSharp
-          m_MethodName: open
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 641
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 522875838}
-          m_TargetAssemblyTypeName: Drawer, Assembly-CSharp
-          m_MethodName: stop
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 641
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &522875838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -752,6 +707,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 619a80f9c6f8f2145ac91ca8f2b5c4ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correct: 060000000400000001000000
+  origin: 0
 --- !u!65 &522875842
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3577,7 +3534,6 @@ GameObject:
   - component: {fileID: 4485383339686138118}
   - component: {fileID: 5611090093888084868}
   - component: {fileID: 522875842}
-  - component: {fileID: 522875837}
   - component: {fileID: 522875838}
   m_Layer: 0
   m_Name: drawer1
@@ -4138,7 +4094,6 @@ GameObject:
   - component: {fileID: 3118443176929251011}
   - component: {fileID: 5447444368735389117}
   - component: {fileID: 899179439386548147}
-  - component: {fileID: 7735164447122017518}
   - component: {fileID: 7735164447122017517}
   - component: {fileID: 7735164447122017516}
   m_Layer: 0
@@ -4160,6 +4115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 619a80f9c6f8f2145ac91ca8f2b5c4ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correct: 
+  origin: 0
 --- !u!65 &7735164447122017517
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4173,51 +4130,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.00030356488, y: 0.019999998, z: 0.019999998}
   m_Center: {x: -0.010037265, y: 0.0000000041106656, z: -0.000000008023702}
---- !u!114 &7735164447122017518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7735164447122017515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 7735164447122017516}
-          m_TargetAssemblyTypeName: Drawer, Assembly-CSharp
-          m_MethodName: open
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 7735164447122017516}
-          m_TargetAssemblyTypeName: Drawer, Assembly-CSharp
-          m_MethodName: stop
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!33 &8012058990137714807
 MeshFilter:
   m_ObjectHideFlags: 0

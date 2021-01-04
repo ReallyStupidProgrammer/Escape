@@ -19,10 +19,6 @@ public class Door : MonoBehaviour {
         if (reverse) {
             mouseX *= -1;
         }
-            //print(mouseX);
-            // print(current);
-
-         //else {
         if (leftRight) {
             if (transfer(current + mouseX) > transfer(origin + 90)) return;
             if (transfer(current + mouseX) < origin) return;
@@ -30,8 +26,6 @@ public class Door : MonoBehaviour {
             if (transfer(current + mouseX) < transfer(origin - 90)) return;
             if (transfer(current + mouseX) > origin) return;
         }
-        // }
-
         transform.Rotate(0, mouseX, 0, Space.World);
     }
 }
