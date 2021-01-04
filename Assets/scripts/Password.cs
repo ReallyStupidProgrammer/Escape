@@ -3,16 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Password : MonoBehaviour
-{
+public class Password : MonoBehaviour {
     public int index;
-    private GameObject item; 
+    public int[] correct;
+    private int[] password = {0, 0, 0};
+    private bool whetherCorrect = false;
+    private GameObject item;
     public void add() {
         Text pwd = gameObject.GetComponent<Text>();
         int num = int.Parse(pwd.text);
         num = (num + 1) % 10;
         pwd.text = num.ToString();
         item = gameObject.transform.parent.parent.gameObject;
-        item.GetComponent<Drawer>().updatePassword(index, num);
+        item.GetComponent<Password>().updatePassword(index, num);
+    }
+
+    private bool checkPwd() {
+        for (int i = 0; i < 3; i ++) {
+            if (password[i] != correct[i]) return false;
+        }
+        return true;
+    }
+
+    private void Update() {
+        if (gameObject.tag == "locked") {
+            if (whetherCorrect) {
+                gameObject.tag = "unlocked";
+            }
+        }    
+    }
+
+    public void updatePassword(int index, int num) {
+        password[index] = num;
+        whetherCorrect = checkPwd();
     }
 }

@@ -2,14 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Drawer : MonoBehaviour
-{
-    public int[] correct;
-
+public class Drawer : MonoBehaviour {
     public float origin;
-
-    private int[] password = {0, 0, 0};
-    private bool whetherCorrect = false;
 
     public void open() {
         float mouseY = Input.GetAxis("Mouse Y") * 0.1f;
@@ -18,25 +12,5 @@ public class Drawer : MonoBehaviour
             print("test");
             transform.Translate(mouseY, 0, 0, Space.Self);
         }
-    }
-
-    private bool checkPwd() {
-        for (int i = 0; i < 3; i ++) {
-            if (password[i] != correct[i]) return false;
-        }
-        return true;
-    }
-
-    private void Update() {
-        if (gameObject.tag == "locked") {
-            if (whetherCorrect) {
-                gameObject.tag = "unlocked";
-            }
-        }    
-    }
-
-    public void updatePassword(int index, int num) {
-        password[index] = num;
-        whetherCorrect = checkPwd();
     }
 }

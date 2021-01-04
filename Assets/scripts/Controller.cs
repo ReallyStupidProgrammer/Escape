@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Controller : MonoBehaviour
-{
+public class Controller : MonoBehaviour {
     RaycastHit hit;
     GameObject current;
     public static string message = "";
