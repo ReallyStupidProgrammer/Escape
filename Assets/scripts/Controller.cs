@@ -25,13 +25,17 @@ public class Controller : MonoBehaviour
             if (Input.GetMouseButtonUp(0)) door.tag = "unlocked";
         } else if (door.tag == "unlocked") {
             door.GetComponent<Door>().open();
-        }
+        } 
     }
 
     private void drawerOperation(GameObject drawer) {
         if (drawer.tag == "unlocked") {
             drawer.GetComponent<Drawer>().open();
         }
+    }
+
+    private void pwdOperation(GameObject pwd) {
+        pwd.GetComponent<Password>().add();
     }
     
     // Update is called once per frame
@@ -41,14 +45,17 @@ public class Controller : MonoBehaviour
             current = hit.collider.gameObject;
         }
         if (current != null) {
+            print(current.name);
             if (current.name.IndexOf("Door") >= 0) {
                 doorOperation(current);
-            }
-            if (current.name.IndexOf("drawer") >= 0) {
+            } else if (current.name.IndexOf("drawer") >= 0) {
                 drawerOperation(current);
             }
         }
         if (Input.GetMouseButtonUp(0)) {
+            if (current.name.IndexOf("Pwd") >= 0) {
+                pwdOperation(current);
+            }
             current = null;
         }
 

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Drawer : MonoBehaviour
 {
-    // IEnumerator coroutine = null;
-    public static int[] password = {0, 0, 0};
-
     public int[] correct;
 
     public float origin;
+
+    private int[] password = {0, 0, 0};
+    private bool whetherCorrect = false;
 
     public void open() {
         float mouseY = Input.GetAxis("Mouse Y") * 0.1f;
@@ -29,9 +29,14 @@ public class Drawer : MonoBehaviour
 
     private void Update() {
         if (gameObject.tag == "locked") {
-            if (checkPwd()) {
+            if (whetherCorrect) {
                 gameObject.tag = "unlocked";
             }
-        }
+        }    
+    }
+
+    public void updatePassword(int index, int num) {
+        password[index] = num;
+        whetherCorrect = checkPwd();
     }
 }
