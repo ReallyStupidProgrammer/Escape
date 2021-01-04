@@ -7,6 +7,7 @@ public class Controller : MonoBehaviour
     RaycastHit hit;
     GameObject current;
     public static string message = "";
+    public static Color messageColor = Color.clear;
 
     bool getHit() {
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -16,13 +17,13 @@ public class Controller : MonoBehaviour
     //Control the door operations.
     private void doorOperation(GameObject door) {
         if (door.tag == "locked") {
-            message = "noKey";
-            //GUI.Label(new Rect(500, 500, 50, 50), "缺少钥匙");
+            message = "缺少钥匙";
+            messageColor = Color.red;
         } else if (door.tag == "keyFound") {
-            //print("test1");
+            message = "已开锁";
+            messageColor = Color.green;
             door.tag = "unlocked";
         } else if (door.tag == "unlocked" && Input.GetMouseButton(0)) {
-            //print("test1");
             door.GetComponent<Door>().open();
         }
     }

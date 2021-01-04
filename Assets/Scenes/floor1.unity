@@ -1418,7 +1418,7 @@ GameObject:
   - component: {fileID: 713554496}
   - component: {fileID: 713554495}
   m_Layer: 5
-  m_Name: noKey
+  m_Name: messageRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3313,12 +3313,12 @@ GameObject:
   - component: {fileID: 1821258763}
   - component: {fileID: 1821258764}
   m_Layer: 5
-  m_Name: unlock
+  m_Name: messageGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1821258762
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3371,7 +3371,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5DF2\u5F00\u9501"
+  m_Text: 
 --- !u!114 &1821258764
 MonoBehaviour:
   m_ObjectHideFlags: 0

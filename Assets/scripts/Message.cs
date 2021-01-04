@@ -1,26 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Message : MonoBehaviour
 {
     IEnumerator coroutine;
+    Text currentText;
+
+    bool started = false;
 
     IEnumerator message() {
+        currentText.text = Controller.message;
+        currentText.color = Controller.messageColor;
         yield return new WaitForSeconds(1);
-        gameObject.SetActive(false);
+        currentText.text = "";
+        started = false;
+        Controller.message = "";
+        StopCoroutine(coroutine);
     }
-
     public void showMessage() {
-        gameObject.SetActive(true);
+        if (started) return;
         coroutine = message();
+        started = true;
         StartCoroutine(coroutine);
     }
 
     private void Update() {
-        print(Controller.message);
-        if (gameObject.name == Controller.message) {
-            showMessage();
-        }
+        if (Controller.message == "") return;
+        currentText = gameObject.GetComponent<Text>();
+        showMessage();
     }
 }
