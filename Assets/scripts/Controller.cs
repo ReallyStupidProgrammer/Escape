@@ -16,7 +16,7 @@ public class Controller : MonoBehaviour {
     //Control the door operations.
     private void doorOperation(GameObject door) {
         if (door.tag == "locked") {
-            message = "缺少钥匙";
+            message = "未解锁";
             messageColor = Color.red;
         } else if (door.tag == "keyFound") {
             message = "已开锁";
@@ -36,6 +36,13 @@ public class Controller : MonoBehaviour {
     private void pwdOperation(GameObject pwd) {
         pwd.GetComponent<Password>().add();
     }
+
+    private void transmitOperation(GameObject transmition) {
+        message = "前往地下室";
+        messageColor = Color.green;
+        int upDown = transmition.GetComponent<Transmit>().getUpDown();
+        transform.Translate(0, upDown * 26, 0, Space.World);
+    }
     
     // Update is called once per frame
     private void Update() {
@@ -49,11 +56,13 @@ public class Controller : MonoBehaviour {
                 doorOperation(current);
             } else if (current.name.IndexOf("drawer") >= 0) {
                 drawerOperation(current);
-            }
+            } 
         }
         if (Input.GetMouseButtonUp(0)) {
             if (current.name.IndexOf("Pwd") >= 0) {
                 pwdOperation(current);
+            } else if (current.name.IndexOf("Transmition") >= 0) {
+                transmitOperation(current);
             }
             current = null;
         }
