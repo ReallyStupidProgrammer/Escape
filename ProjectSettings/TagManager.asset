@@ -13,6 +13,7 @@ TagManager:
   - NoPower
   - PowerOn
   - Broken
+  - item
   layers:
   - Default
   - TransparentFX

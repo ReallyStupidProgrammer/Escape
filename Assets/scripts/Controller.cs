@@ -53,6 +53,11 @@ public class Controller : MonoBehaviour {
         }
     }
     
+    private void keyHoleOperation(GameObject keyHole) {
+        if (KeyHole.lightControl < 2) KeyHole.lightControl += 1;
+        print(KeyHole.lightControl);
+    }
+
     // Update is called once per frame
     private void Update() {
         if (Input.GetMouseButtonDown(0)) {
@@ -74,6 +79,8 @@ public class Controller : MonoBehaviour {
                 transmitOperation(current);
             } else if (current.name.IndexOf("computer") >= 0) {
                 computerOperation(current);
+            } else if (current.name.IndexOf("KeyHole") >= 0) {
+                keyHoleOperation(current);
             }
             current = null;
         }

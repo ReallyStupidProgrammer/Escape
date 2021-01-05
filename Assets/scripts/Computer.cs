@@ -19,5 +19,9 @@ public class Computer : MonoBehaviour {
             GameObject parent = gameObject.transform.parent.gameObject;
             if (parent.tag == "Broken") Destroy(gameObject);
         }
+        if (gameObject.name.IndexOf("computer") >= 0) {
+            if (KeyHole.lightControl >= 1 && gameObject.tag == "NoPower") 
+                gameObject.tag = "PowerOn";
+        }
     }
 }
