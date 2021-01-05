@@ -42,9 +42,11 @@ public class Controller : MonoBehaviour {
         messageColor = Color.green;
         int upDown = transmition.GetComponent<Transmit>().getUpDown();
         //transform.Translate(0, upDown * 26, 0, Space.World);
-        transform.position = new Vector3(transform.position.x, 
-                                         transform.position.y + upDown * 26, 
-                                         transform.position.z);
+        Transform currentTransform = gameObject.GetComponent<CharacterController>().transform;
+        currentTransform = gameObject.transform;
+        currentTransform.position = new Vector3(transform.position.x, 
+                                                transform.position.y + upDown * 26, 
+                                                transform.position.z);
     }
     
     // Update is called once per frame

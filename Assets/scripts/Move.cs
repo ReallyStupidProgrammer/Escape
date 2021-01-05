@@ -26,7 +26,8 @@ public class Move : MonoBehaviour {
     // Update is called once per frame
     void Update() {       
         var dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        if (dir != Vector3.zero) controller.Move(transform.rotation * dir * (Speed * Time.deltaTime));
+        //if (dir != Vector3.zero) 
+            controller.Move(transform.rotation * dir * (Speed * Time.deltaTime));
         
         if (Input.GetMouseButton(1)) {
             float mouseX = Input.GetAxis("Mouse X") * 3;
