@@ -38,12 +38,19 @@ public class Controller : MonoBehaviour {
     }
 
     private void transmitOperation(GameObject transmition) {
-        message = "前往地下室";
+        message = transmition.GetComponent<Transmit>().getMessage();
         messageColor = Color.green;
         int upDown = transmition.GetComponent<Transmit>().getUpDown();
         transform.position = new Vector3(transform.position.x, 
                                          transform.position.y + upDown * 26, 
                                          transform.position.z);
+    }
+
+    private void computerOperation(GameObject computer) {
+        if (computer.tag == "NoPower") {
+            message = "未通电";
+            messageColor = Color.red;
+        }
     }
     
     // Update is called once per frame
@@ -65,6 +72,8 @@ public class Controller : MonoBehaviour {
                 pwdOperation(current);
             } else if (current.name.IndexOf("Transmition") >= 0) {
                 transmitOperation(current);
+            } else if (current.name.IndexOf("computer") >= 0) {
+                computerOperation(current);
             }
             current = null;
         }

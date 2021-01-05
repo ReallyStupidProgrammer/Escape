@@ -9,8 +9,11 @@ public class Door : MonoBehaviour {
 
     public bool leftRight;
 
-    float transfer(float temp) {
-        return (temp + 360) % 360;
+    float transfer(float temp, bool added) {
+        float ans = (temp + 360) % 360;
+        if ((int) ans == 0)
+            if (added) ans += 360;
+        return ans;
     }
 
     public void open() {
@@ -20,11 +23,11 @@ public class Door : MonoBehaviour {
             mouseX *= -1;
         }
         if (leftRight) {
-            if (transfer(current + mouseX) > transfer(origin + 90)) return;
-            if (transfer(current + mouseX) < origin) return;
+            if (transfer(current + mouseX, false) > transfer(origin + 90, true)) return;
+            if (transfer(current + mouseX, false) < transfer(origin, false)) return;
         } else {
-            if (transfer(current + mouseX) < transfer(origin - 90)) return;
-            if (transfer(current + mouseX) > origin) return;
+            if (transfer(current + mouseX, false) < transfer(origin - 90, false)) return;
+            if (transfer(current + mouseX, false) > transfer(origin, true)) return;
         }
         transform.Rotate(0, mouseX, 0, Space.World);
     }

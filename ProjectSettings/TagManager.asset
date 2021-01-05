@@ -10,6 +10,9 @@ TagManager:
   - showed
   - keyFound
   - opened
+  - NoPower
+  - PowerOn
+  - Broken
   layers:
   - Default
   - TransparentFX
