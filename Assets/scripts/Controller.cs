@@ -41,12 +41,9 @@ public class Controller : MonoBehaviour {
         message = "前往地下室";
         messageColor = Color.green;
         int upDown = transmition.GetComponent<Transmit>().getUpDown();
-        //transform.Translate(0, upDown * 26, 0, Space.World);
-        Transform currentTransform = gameObject.GetComponent<CharacterController>().transform;
-        currentTransform = gameObject.transform;
-        currentTransform.position = new Vector3(transform.position.x, 
-                                                transform.position.y + upDown * 26, 
-                                                transform.position.z);
+        transform.position = new Vector3(transform.position.x, 
+                                         transform.position.y + upDown * 26, 
+                                         transform.position.z);
     }
     
     // Update is called once per frame
