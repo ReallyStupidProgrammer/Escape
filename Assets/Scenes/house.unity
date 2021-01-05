@@ -347,6 +347,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.001, y: 0.007, z: 0.02}
   m_Center: {x: -0.01, y: 0.0065, z: 0}
+--- !u!1 &141082699 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 80ad22736d1104645976049810b93749, type: 3}
+  m_PrefabInstance: {fileID: 233136798}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &141082703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141082699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f87e1765a61e0449b8e2efa5998bfd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectName: "\u7D2B\u8272\u94A5\u5319"
+--- !u!65 &141082704
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141082699}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.24085326, y: 0.24085334, z: 0.04768854}
+  m_Center: {x: -0.10953667, y: 0.09208758, z: -0.0011557303}
 --- !u!1 &141808513 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1992151806753046564, guid: 7f1e0c1df49e94445818edf6657853a9, type: 3}
@@ -511,6 +542,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 80ad22736d1104645976049810b93749, type: 3}
       propertyPath: m_Name
       value: purpleKey
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 80ad22736d1104645976049810b93749, type: 3}
+      propertyPath: m_TagString
+      value: item
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80ad22736d1104645976049810b93749, type: 3}
@@ -3529,38 +3564,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1255569817}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 308d3595b98744849be236b3c5969a35, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f87e1765a61e0449b8e2efa5998bfd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1255569819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1255569817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1255569818}
-          m_TargetAssemblyTypeName: Items, Assembly-CSharp
-          m_MethodName: collect
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+  objectName: "\u78C1\u94C1"
 --- !u!65 &1255569820
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4232,6 +4239,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b7298d9a954affa4da0e74b10570c9d9, type: 3}
       propertyPath: m_Name
       value: magnet
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b7298d9a954affa4da0e74b10570c9d9, type: 3}
+      propertyPath: m_TagString
+      value: item
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7298d9a954affa4da0e74b10570c9d9, type: 3}

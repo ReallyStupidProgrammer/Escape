@@ -58,6 +58,12 @@ public class Controller : MonoBehaviour {
         print(KeyHole.lightControl);
     }
 
+    private void itemOperation(GameObject item) {
+        item.GetComponent<Item>().collect();
+        message = "获得道具：" + item.GetComponent<Item>().getName();
+        messageColor = Color.green;
+    }
+
     // Update is called once per frame
     private void Update() {
         if (Input.GetMouseButtonDown(0)) {
@@ -81,6 +87,8 @@ public class Controller : MonoBehaviour {
                 computerOperation(current);
             } else if (current.name.IndexOf("KeyHole") >= 0) {
                 keyHoleOperation(current);
+            } else if (current.tag == "item") {
+                itemOperation(current);
             }
             current = null;
         }
