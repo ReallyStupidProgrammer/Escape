@@ -41,7 +41,10 @@ public class Controller : MonoBehaviour {
         message = "前往地下室";
         messageColor = Color.green;
         int upDown = transmition.GetComponent<Transmit>().getUpDown();
-        transform.Translate(0, upDown * 26, 0, Space.World);
+        //transform.Translate(0, upDown * 26, 0, Space.World);
+        transform.position = new Vector3(transform.position.x, 
+                                         transform.position.y + upDown * 26, 
+                                         transform.position.z);
     }
     
     // Update is called once per frame
@@ -51,7 +54,7 @@ public class Controller : MonoBehaviour {
             current = hit.collider.gameObject;
         }
         if (current != null) {
-            print(current.name);
+            //print(current.name);
             if (current.name.IndexOf("Door") >= 0) {
                 doorOperation(current);
             } else if (current.name.IndexOf("drawer") >= 0) {
