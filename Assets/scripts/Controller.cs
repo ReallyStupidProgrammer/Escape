@@ -54,7 +54,6 @@ public class Controller : MonoBehaviour {
     
     private void keyHoleOperation(GameObject keyHole) {
         if (KeyHole.lightControl < 2) KeyHole.lightControl += 1;
-        print(KeyHole.lightControl);
     }
 
     private void itemOperation(GameObject item) {
@@ -63,6 +62,10 @@ public class Controller : MonoBehaviour {
         messageColor = Color.green;
     }
     
+    private void coverOperation(GameObject cover) {
+        cover.GetComponent<Cover>().open();
+    }
+
     private void Update() {
         if (Input.GetMouseButtonDown(0)) {
             if (!getHit()) return;
@@ -73,8 +76,11 @@ public class Controller : MonoBehaviour {
                 doorOperation(current);
             } else if (current.name.IndexOf("drawer") >= 0) {
                 drawerOperation(current);
-            } 
-        }
+            } else if (current.name.IndexOf("cover") >= 0) {
+                coverOperation(current);
+            }
+        } else 
+            return;
         if (Input.GetMouseButtonUp(0)) {
             if (current.name.IndexOf("Pwd") >= 0) {
                 pwdOperation(current);
