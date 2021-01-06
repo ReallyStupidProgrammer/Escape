@@ -13,7 +13,6 @@ public class Controller : MonoBehaviour {
         return Physics.Raycast((Ray) ray, out hit);
     }
 
-    //Control the door operations.
     private void doorOperation(GameObject door) {
         if (door.tag == "locked") {
             message = "未解锁";
@@ -63,15 +62,13 @@ public class Controller : MonoBehaviour {
         message = "获得道具：" + item.GetComponent<Item>().getName();
         messageColor = Color.green;
     }
-
-    // Update is called once per frame
+    
     private void Update() {
         if (Input.GetMouseButtonDown(0)) {
             if (!getHit()) return;
             current = hit.collider.gameObject;
         }
         if (current != null) {
-            //print(current.name);
             if (current.name.IndexOf("Door") >= 0) {
                 doorOperation(current);
             } else if (current.name.IndexOf("drawer") >= 0) {

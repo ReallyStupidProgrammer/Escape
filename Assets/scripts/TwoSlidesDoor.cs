@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TwoSlidesDoor : MonoBehaviour {
+
     GameObject parentObject;
+    
     private void Update() {
         parentObject = gameObject.transform.parent.gameObject;
         if (parentObject.tag == "unlocked") {

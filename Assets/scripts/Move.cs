@@ -23,7 +23,6 @@ public class Move : MonoBehaviour {
         controller.Move(transform.right * Time.deltaTime * Speed);
     }
 
-    // Update is called once per frame
     void Update() {       
         var dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         if (dir != Vector3.zero) 
