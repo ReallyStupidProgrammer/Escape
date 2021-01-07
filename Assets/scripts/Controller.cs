@@ -37,9 +37,9 @@ public class Controller : MonoBehaviour {
     }
 
     private void transmitOperation(GameObject transmition) {
-        message = transmition.GetComponent<Transmit>().getMessage();
+        message = transmition.GetComponent<Transmit>().message;
         messageColor = Color.green;
-        int upDown = transmition.GetComponent<Transmit>().getUpDown();
+        int upDown = transmition.GetComponent<Transmit>().upDown;
         transform.position = new Vector3(transform.position.x, 
                                          transform.position.y + upDown * 26, 
                                          transform.position.z);
@@ -58,7 +58,7 @@ public class Controller : MonoBehaviour {
 
     private void itemOperation(GameObject item) {
         item.GetComponent<Item>().collect();
-        message = "获得道具：" + item.GetComponent<Item>().getName();
+        message = "获得道具：" + item.GetComponent<Item>().objectName;
         messageColor = Color.green;
     }
     

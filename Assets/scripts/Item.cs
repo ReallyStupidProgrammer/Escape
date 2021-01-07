@@ -6,9 +6,8 @@ public class Item : MonoBehaviour {
 
     public string objectName;
 
-    public string getName() {
-        return objectName;
-    }
+    public Texture picture;
+
     public void collect() {
         Destroy(gameObject);        
     }

@@ -2,17 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemGUI : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public class ItemGUI : MonoBehaviour {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void Start() {
+        GUI.Button(new Rect(10, 10, 50, 50), "test");    
     }
 }

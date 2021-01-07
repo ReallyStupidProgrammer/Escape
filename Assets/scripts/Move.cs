@@ -10,19 +10,6 @@ public class Move : MonoBehaviour {
         controller = gameObject.GetComponent<CharacterController>();
     }
 
-    void MoveForward() {
-        controller.Move(transform.forward * Time.deltaTime * Speed);
-    }
-    void MoveBack() { 
-        controller.Move(transform.forward * Time.deltaTime * -Speed) ;
-    }
-    void MoveLeft() { 
-        controller.Move(transform.right * Time.deltaTime * -Speed);
-    }
-    void MoveRight() {
-        controller.Move(transform.right * Time.deltaTime * Speed);
-    }
-
     void Update() {       
         var dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         if (dir != Vector3.zero) 
