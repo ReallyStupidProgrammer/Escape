@@ -6,6 +6,8 @@ public class Cover : MonoBehaviour {
 
     public float origin;
 
+    public static bool pwdCorrect = false;
+
     float transfer(float temp) {
         float ans = (temp + 360) % 360;
         if ((int) ans == 0 ) ans += 360;
@@ -13,10 +15,21 @@ public class Cover : MonoBehaviour {
     }
 
     public void open() {
-        float mouseY = -Input.GetAxis("Mouse Y") * 3;
-        float current = transform.localEulerAngles.z;
-        if (transfer(current + mouseY) < transfer(origin - 90)) return;
-        if (transfer(current + mouseY) > transfer(origin)) return;
-        transform.Rotate(0, 0, mouseY, Space.World);
+        if (gameObject.tag == "unlocked") {
+            float mouseY = -Input.GetAxis("Mouse Y") * 3;
+            float current = transform.localEulerAngles.z;
+            if (transfer(current + mouseY) < transfer(origin - 90)) return;
+            if (transfer(current + mouseY) > transfer(origin)) return;
+            transform.Rotate(0, 0, mouseY, Space.World);
+        }
+    }
+
+    public void updatePassword() {
+        
+    }
+
+    private void Update() {
+        if (gameObject.tag == "locked" && pwdCorrect)
+            gameObject.tag = "unlocked";
     }
 }
