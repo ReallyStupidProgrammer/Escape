@@ -13,8 +13,6 @@ public class ItemOnListText : MonoBehaviour {
 
     private void Update() {
         string objectName = parentObject.GetComponent<ItemOnList>().objectName;
-        if (objectName != "") {
-            gameObject.GetComponent<Text>().text = objectName;
-        }
+        gameObject.GetComponent<Text>().text = objectName;
     }
 }

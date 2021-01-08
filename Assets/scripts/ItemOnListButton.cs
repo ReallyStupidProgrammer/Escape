@@ -13,17 +13,19 @@ public class ItemOnListButton : MonoBehaviour {
 
     public void onClicked() {
         string itemName = parentObject.GetComponent<ItemOnList>().itemName;
-        if (Item.selectedItemName == itemName) 
+        int itemIndex = parentObject.GetComponent<ItemOnList>().index;
+        if (Item.selectedItemName == itemName) {
             Item.selectedItemName = "";
-        else 
+            Item.selectedItemIndex = -1;
+        } else { 
             Item.selectedItemName = itemName;
+            Item.selectedItemIndex = itemIndex;
+        }
     }
 
     private void Update() {
         Sprite picture = parentObject.GetComponent<ItemOnList>().picture;
-        if (picture != null) {
-            gameObject.GetComponent<Button>().image.sprite = picture;
-        }
+        gameObject.GetComponent<Button>().image.sprite = picture;
     }
     
 }

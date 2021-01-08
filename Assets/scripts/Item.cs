@@ -5,6 +5,8 @@ using UnityEngine;
 public class Item : MonoBehaviour {
 
     public static string selectedItemName = "";
+
+    public static int selectedItemIndex = -1;
     public string objectName;
 
     public Sprite picture;

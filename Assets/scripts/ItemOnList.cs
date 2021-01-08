@@ -11,8 +11,13 @@ public class ItemOnList : MonoBehaviour {
 
     public string objectName = "";
 
+    public int index;
+
     private void Update() {
-        if (itemName == "") return;
+        if (itemName == "") {
+            gameObject.GetComponentInChildren<Button>().image.color = Color.white;
+            return;
+        }
         if (itemName == Item.selectedItemName) {
             gameObject.GetComponentInChildren<Button>().image.color = Color.yellow;
         } else {

@@ -18,11 +18,23 @@ public class ItemGUI : MonoBehaviour {
             RectTransform objectRect = temp.GetComponent<RectTransform>();
             objectRect.anchorMin = new Vector2((i % 2 == 0) ? 0 : 0.6f, 0.8f - ((int) i / 2) * 0.2f);
             objectRect.anchorMax = new Vector2((i % 2 == 0) ? 0.4f : 1, 1 - ((int) i / 2) * 0.2f);
+            temp.GetComponent<ItemOnList>().index = i;
             itemList.Add(temp);
         }
     }
 
-    private void Update() {
+    public static void updateItemList(int index) {
+        for (int i = index; i < lastItemIndex; i ++) {
+            itemList[i].GetComponent<ItemOnList>().picture = itemList[i + 1].GetComponent<ItemOnList>().picture;
+            itemList[i].GetComponent<ItemOnList>().itemName = itemList[i + 1].GetComponent<ItemOnList>().itemName;
+            itemList[i].GetComponent<ItemOnList>().objectName = itemList[i + 1].GetComponent<ItemOnList>().objectName;
+            itemList[i].GetComponent<ItemOnList>().index = i;
+        }
+        lastItemIndex --;
+    }
 
+    public static void resetSelected() {
+        Item.selectedItemIndex = -1;
+        Item.selectedItemName = "";
     }
 }
