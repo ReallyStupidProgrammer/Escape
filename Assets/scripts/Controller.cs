@@ -79,6 +79,14 @@ public class Controller : MonoBehaviour {
         cover.GetComponent<Cover>().open();
     }
 
+    private void screenOperation(GameObject screen) {
+        if (Item.selectedItemName == screen.GetComponent<Screen>().relatedItem.name) {
+            screen.GetComponent<Screen>().crash();
+            
+        }
+        
+    }
+
     private void Update() {
         if (Input.GetMouseButtonDown(0)) {
             if (!getHit()) return;
@@ -105,6 +113,8 @@ public class Controller : MonoBehaviour {
                 keyHoleOperation(current);
             } else if (current.tag == "item") {
                 itemOperation(current);
+            } else if (current.name.IndexOf("screen") >= 0) {
+                screenOperation(current);
             }
             current = null;
         }
