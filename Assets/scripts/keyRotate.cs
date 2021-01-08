@@ -2,17 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class keyRotate : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public class KeyRotate : MonoBehaviour {
 
-    // Update is called once per frame
-    void Update()
-    {
+    public void rotate(RaycastHit hit) {
         
     }
 }

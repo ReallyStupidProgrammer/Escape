@@ -64,8 +64,12 @@ public class Controller : MonoBehaviour {
     }
     
     private void keyHoleOperation(GameObject keyHole) {
-        print(KeyHole.lightControl);
-        if (KeyHole.lightControl < 2) KeyHole.lightControl += 1;
+        //if (KeyHole.lightControl < 2) KeyHole.lightControl += 1;
+        if (keyHole.GetComponent<KeyHole>().key.name == Item.selectedItemName) {
+            keyHole.GetComponent<KeyHole>().plugin();
+            ItemGUI.updateItemList(Item.selectedItemIndex);
+            ItemGUI.resetSelected();
+        }
     }
 
     private void itemOperation(GameObject item) {
@@ -82,7 +86,7 @@ public class Controller : MonoBehaviour {
     private void screenOperation(GameObject screen) {
         if (Item.selectedItemName == screen.GetComponent<Screen>().relatedItem.name) {
             screen.GetComponent<Screen>().crash();
-            
+
         }
         
     }
