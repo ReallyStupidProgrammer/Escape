@@ -84,9 +84,12 @@ public class Controller : MonoBehaviour {
     }
 
     private void screenOperation(GameObject screen) {
+        if (screen.transform.parent.gameObject.tag == "NoPower") {
+            message = "未通电";
+            messageColor = Color.red;
+        }
         if (Item.selectedItemName == screen.GetComponent<Screen>().relatedItem.name) {
             screen.GetComponent<Screen>().crash();
-
         }
         
     }
