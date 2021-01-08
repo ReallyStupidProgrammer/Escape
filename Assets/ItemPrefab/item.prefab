@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1013133773074514848}
   - component: {fileID: 3758329053541340122}
   - component: {fileID: 7879414795257156554}
-  - component: {fileID: 208386831127473200}
+  - component: {fileID: 2750464352792998650}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -80,7 +80,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
---- !u!114 &208386831127473200
+--- !u!114 &2750464352792998650
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1948419101044592651}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61432ad4b385b7d408883b0df407db81, type: 3}
+  m_Script: {fileID: 11500000, guid: 7864ee56112ddb04f8b33136cab18f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3742741335859949390
@@ -143,8 +143,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   picture: {fileID: 0}
-  buttonColor: {r: 1, g: 1, b: 1, a: 1}
   itemName: 
+  objectName: 
 --- !u!1 &5632338011921400613
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,12 +15,16 @@ public class Controller : MonoBehaviour {
 
     private void doorOperation(GameObject door) {
         if (door.tag == "locked") {
-            message = "未解锁";
-            messageColor = Color.red;
-        } else if (door.tag == "keyFound") {
-            message = "已开锁";
-            messageColor = Color.green;
-            if (Input.GetMouseButtonUp(0)) door.tag = "unlocked";
+            string keyName = door.GetComponent<Door>().relatedKey.name;
+            if (Item.selectedItemName != keyName) {
+                message = "未解锁";
+                messageColor = Color.red;
+            } else {
+                message = "已开锁";
+                messageColor = Color.green;
+                Item.selectedItemName = "";
+                door.tag = "unlocked";
+            }
         } else if (door.tag == "unlocked") {
             door.GetComponent<Door>().open();
         } 
@@ -57,6 +61,7 @@ public class Controller : MonoBehaviour {
     }
 
     private void itemOperation(GameObject item) {
+        if (item.GetComponent<Item>().collected) return;
         item.GetComponent<Item>().collect();
         message = "获得道具：" + item.GetComponent<Item>().objectName;
         messageColor = Color.green;

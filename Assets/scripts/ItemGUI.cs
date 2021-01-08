@@ -23,6 +23,6 @@ public class ItemGUI : MonoBehaviour {
     }
 
     private void Update() {
-        
+
     }
 }

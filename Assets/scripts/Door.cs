@@ -9,6 +9,8 @@ public class Door : MonoBehaviour {
 
     public bool leftRight;
 
+    public GameObject relatedKey;
+
     float transfer(float temp, bool added) {
         float ans = (temp + 360) % 360;
         if ((int) ans == 0)

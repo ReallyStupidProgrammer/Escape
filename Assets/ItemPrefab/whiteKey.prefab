@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectName: "\u767D\u8272\u94A5\u5319"
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: 0f47a08dbd9f8694ca2dd93a53689f01, type: 3}
 --- !u!65 &1144174279144863890
 BoxCollider:
   m_ObjectHideFlags: 0

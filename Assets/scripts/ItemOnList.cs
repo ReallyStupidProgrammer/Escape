@@ -9,6 +9,8 @@ public class ItemOnList : MonoBehaviour {
 
     public string itemName = "";
 
+    public string objectName = "";
+
     private void Update() {
         if (itemName == "") return;
         if (itemName == Item.selectedItemName) {
