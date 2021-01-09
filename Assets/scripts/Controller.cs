@@ -64,12 +64,15 @@ public class Controller : MonoBehaviour {
     }
     
     private void keyHoleOperation(GameObject keyHole) {
-        //if (KeyHole.lightControl < 2) KeyHole.lightControl += 1;
         if (keyHole.GetComponent<KeyHole>().key.name == Item.selectedItemName) {
             keyHole.GetComponent<KeyHole>().plugin();
             ItemGUI.updateItemList(Item.selectedItemIndex);
             ItemGUI.resetSelected();
         }
+    }
+
+    private void rotateKeyOperation(GameObject key) {
+        key.GetComponent<KeyRotate>().rotate();
     }
 
     private void itemOperation(GameObject item) {
@@ -106,6 +109,8 @@ public class Controller : MonoBehaviour {
                 drawerOperation(current);
             } else if (current.name.IndexOf("cover") >= 0) {
                 coverOperation(current);
+            } else if (current.tag == "pluged") {
+                rotateKeyOperation(current);
             }
         } else 
             return;

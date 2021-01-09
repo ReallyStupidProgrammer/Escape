@@ -8,7 +8,7 @@ public class KeyHole : MonoBehaviour {
 
     public GameObject key;
 
-    private bool pluged = false;
+    public bool pluged = false;
 
     public void plugin() {
         if (pluged) return;
@@ -17,5 +17,7 @@ public class KeyHole : MonoBehaviour {
                                         new Quaternion(0.9f, 0.0f, -0.4f, 0.0f));
         pluged = true;
         newKey.GetComponent<Item>().collected = true;
+        newKey.AddComponent<KeyRotate>();
+        newKey.tag = "pluged";
     }
 }

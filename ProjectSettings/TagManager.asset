@@ -13,6 +13,7 @@ TagManager:
   - PowerOn
   - Broken
   - item
+  - pluged
   layers:
   - Default
   - TransparentFX
