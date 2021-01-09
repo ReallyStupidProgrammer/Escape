@@ -21,8 +21,6 @@ public class KeyRotate : MonoBehaviour {
         float mouseY = hit.point.y;
         float keyX = gameObject.transform.position.x;
         float keyY = gameObject.transform.position.y;
-        //print((mouseY - keyY) / (mouseX - keyX));
-        //print(gameObject.transform.eulerAngles);
         double newAngle = System.Math.Atan2((double) (mouseX - keyX), (double) (mouseY - keyY)) * (180 / System.Math.PI);
         if (newAngle < 0) newAngle += 360;
         if (newAngle <= 1) {
@@ -34,8 +32,6 @@ public class KeyRotate : MonoBehaviour {
         } else {
             flag = false;
         }
-        print(KeyHole.lightControl);
-        //print(newAngle);
         gameObject.transform.eulerAngles = new Vector3(360f - (float) newAngle, 227.9f, 180.0f);
         pre = newAngle;
     }
