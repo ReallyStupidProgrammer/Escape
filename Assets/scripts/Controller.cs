@@ -104,6 +104,11 @@ public class Controller : MonoBehaviour {
     }
 
     private void woodBlankOperation(GameObject woodBlank) {
+        if (!Machine.machinePower) {
+            message = "未通电";
+            messageColor = Color.red;
+            return;
+        }
         if (woodBlank.layer == 0) woodBlank.GetComponent<WoodBlank>().get();
         else woodBlank.GetComponent<WoodBlank>().put();
     }
@@ -139,11 +144,11 @@ public class Controller : MonoBehaviour {
             } else if (current.name.IndexOf("machine") >= 0) {
                 message = "未通电";
                 messageColor = Color.red;
-            } else if (current.name.IndexOf("WoodBlank") >= 0) {
-                woodBlankOperation(current);
             } else if (current.tag == "item") {
                 itemOperation(current);
-            }
+            } else if (current.name.IndexOf("WoodBlank") >= 0) {
+                woodBlankOperation(current);
+            } 
             current = null;
         }
 
