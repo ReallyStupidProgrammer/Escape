@@ -94,7 +94,11 @@ public class Controller : MonoBehaviour {
         if (Item.selectedItemName == screen.GetComponent<Screen>().relatedItem.name) {
             screen.GetComponent<Screen>().crash();
         }
-        
+    }
+
+    private void woodBlankOperation(GameObject woodBlank) {
+        if (woodBlank.layer == 0) woodBlank.GetComponent<WoodBlank>().get();
+        else woodBlank.GetComponent<WoodBlank>().put();
     }
 
     private void Update() {
@@ -123,10 +127,15 @@ public class Controller : MonoBehaviour {
                 computerOperation(current);
             } else if (current.name.IndexOf("KeyHole") >= 0) {
                 keyHoleOperation(current);
-            } else if (current.tag == "item") {
-                itemOperation(current);
             } else if (current.name.IndexOf("screen") >= 0) {
                 screenOperation(current);
+            } else if (current.name.IndexOf("machine") >= 0) {
+                message = "未通电";
+                messageColor = Color.red;
+            } else if (current.name.IndexOf("WoodBlank") >= 0) {
+                woodBlankOperation(current);
+            } else if (current.tag == "item") {
+                itemOperation(current);
             }
             current = null;
         }
