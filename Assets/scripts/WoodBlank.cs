@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class WoodBlank : MonoBehaviour {
 
+    public GameObject relatedWall = null;
+
+    private void move(int upDown) {
+        if (relatedWall != null && Machine.machinePower) relatedWall.transform.Translate(0, upDown * 26, 0, Space.World);
+    }
+
     public void get() {
         gameObject.GetComponent<Item>().collect();
+        move(-1);
     }
 
     public void put() {
@@ -13,6 +20,7 @@ public class WoodBlank : MonoBehaviour {
             gameObject.layer = 0;
             ItemGUI.updateItemList(Item.selectedItemIndex);
             ItemGUI.resetSelected();
+            move(1);
         }
     }
 }

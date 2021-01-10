@@ -15,13 +15,11 @@ public class Cover : MonoBehaviour {
     }
 
     public void open() {
-        if (gameObject.tag == "unlocked") {
-            float mouseY = -Input.GetAxis("Mouse Y") * 3;
-            float current = transform.localEulerAngles.z;
-            if (transfer(current + mouseY) < transfer(origin - 90)) return;
-            if (transfer(current + mouseY) > transfer(origin)) return;
-            transform.Rotate(0, 0, mouseY, Space.World);
-        }
+        float mouseY = -Input.GetAxis("Mouse Y") * 3;
+        float current = transform.localEulerAngles.z;
+        if (transfer(current + mouseY) < transfer(origin - 90)) return;
+        if (transfer(current + mouseY) > transfer(origin)) return;
+        transform.Rotate(0, 0, mouseY, Space.World);
     }
 
     public void updatePassword() {

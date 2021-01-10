@@ -40,6 +40,9 @@ public class Controller : MonoBehaviour {
     private void drawerOperation(GameObject drawer) {
         if (drawer.tag == "unlocked") {
             drawer.GetComponent<Drawer>().open();
+        } else {
+            message = "未解锁";
+            messageColor = Color.red;
         }
     }
 
@@ -83,7 +86,11 @@ public class Controller : MonoBehaviour {
     }
     
     private void coverOperation(GameObject cover) {
-        cover.GetComponent<Cover>().open();
+        if (cover.tag == "unlocked") cover.GetComponent<Cover>().open();
+        else {
+            message = "未解锁";
+            messageColor = Color.red;
+        }
     }
 
     private void screenOperation(GameObject screen) {
