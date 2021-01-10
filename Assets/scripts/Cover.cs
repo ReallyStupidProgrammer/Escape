@@ -19,7 +19,7 @@ public class Cover : MonoBehaviour {
         float current = transform.localEulerAngles.z;
         if (transfer(current + mouseY) < transfer(origin - 90)) return;
         if (transfer(current + mouseY) > transfer(origin)) return;
-        transform.Rotate(0, 0, mouseY, Space.World);
+        transform.Rotate(0, 0, mouseY, Space.Self);
     }
 
     public void updatePassword() {
