@@ -142,8 +142,10 @@ public class Controller : MonoBehaviour {
             } else if (current.name.IndexOf("screen") >= 0) {
                 screenOperation(current);
             } else if (current.name.IndexOf("machine") >= 0) {
-                message = "未通电";
-                messageColor = Color.red;
+                if (!Machine.machinePower) {
+                    message = "未通电";
+                    messageColor = Color.red;
+                }   
             } else if (current.tag == "item") {
                 itemOperation(current);
             } else if (current.name.IndexOf("WoodBlank") >= 0) {
