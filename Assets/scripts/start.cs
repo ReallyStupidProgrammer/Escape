@@ -7,4 +7,8 @@ public class Start : MonoBehaviour {
     public void start() {
         SceneManager.LoadSceneAsync(1);
     }
+
+    public void Menu() {
+        SceneManager.LoadSceneAsync(0);
+    }
 }
