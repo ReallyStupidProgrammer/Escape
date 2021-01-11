@@ -13,6 +13,8 @@ public class Item : MonoBehaviour {
 
     public bool collected = false;
 
+    public bool keepCollider = false;
+
     private void changeLayer(int layerNum) {
         foreach (Transform child in gameObject.GetComponentsInChildren<Transform>()) {
             child.gameObject.layer = layerNum;
@@ -27,6 +29,9 @@ public class Item : MonoBehaviour {
         currentItem.GetComponent<ItemOnList>().picture = picture;
         ItemGUI.lastItemIndex ++;
         changeLayer(8);      
-        collected = true; 
+        collected = true;
+        if (!keepCollider) {
+            Destroy(gameObject.GetComponent<BoxCollider>());
+        } 
     }
 }
