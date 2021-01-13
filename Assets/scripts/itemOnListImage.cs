@@ -1,0 +1,28 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class itemOnListImage : MonoBehaviour {
+
+    GameObject parentObject;
+
+    Color defaultColor;
+
+    private void Start() {
+        parentObject = gameObject.transform.parent.parent.gameObject;
+        defaultColor = Color.white;
+        defaultColor.a = 0;    
+    }
+
+    private void Update() {
+        Sprite picture = parentObject.GetComponent<ItemOnList>().picture;
+        if (picture != null) {
+            gameObject.GetComponent<Image>().sprite = picture;
+            gameObject.GetComponent<Image>().color = Color.white;
+        } else {
+            gameObject.GetComponent<Image>().sprite = null;
+            gameObject.GetComponent<Image>().color = defaultColor;
+        }
+    }
+}

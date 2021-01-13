@@ -100,6 +100,7 @@ public class Controller : MonoBehaviour {
         }
         if (Item.selectedItemName == screen.GetComponent<Screen>().relatedItem.name) {
             screen.GetComponent<Screen>().crash();
+            ItemGUI.resetSelected();
         }
     }
 

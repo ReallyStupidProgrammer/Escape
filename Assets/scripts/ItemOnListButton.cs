@@ -23,9 +23,6 @@ public class ItemOnListButton : MonoBehaviour {
         }
     }
 
-    private void Update() {
-        Sprite picture = parentObject.GetComponent<ItemOnList>().picture;
-        gameObject.GetComponent<Button>().image.sprite = picture;
-    }
+
     
 }
