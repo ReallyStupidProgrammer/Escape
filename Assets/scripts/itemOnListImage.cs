@@ -12,7 +12,7 @@ public class itemOnListImage : MonoBehaviour {
     private void Start() {
         parentObject = gameObject.transform.parent.parent.gameObject;
         defaultColor = Color.white;
-        defaultColor.a = 0;    
+        defaultColor.a = 0.5f;    
     }
 
     private void Update() {
