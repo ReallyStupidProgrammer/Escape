@@ -114,6 +114,10 @@ public class Controller : MonoBehaviour {
         else woodBlank.GetComponent<WoodBlank>().put();
     }
 
+    private void handleOperation(GameObject handle) {
+        handle.GetComponent<Handle>().flush();
+    }
+
     private void Update() {
         if (Input.GetMouseButtonDown(0)) {
             if (!getHit()) return;
@@ -129,6 +133,8 @@ public class Controller : MonoBehaviour {
                 moveOperation(current);
             } else if (current.name.IndexOf("cover") >= 0) {
                 coverOperation(current);
+            } else if (current.name == "closestoolHandle") {
+                handleOperation(current);
             } else if (current.tag == "pluged") {
                 rotateKeyOperation(current);
             }
