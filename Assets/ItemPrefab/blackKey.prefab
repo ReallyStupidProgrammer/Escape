@@ -95,9 +95,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f87e1765a61e0449b8e2efa5998bfd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: "\u767D\u8272\u94A5\u5319"
-  picture: {fileID: 21300000, guid: 0f47a08dbd9f8694ca2dd93a53689f01, type: 3}
+  objectName: "\u9ED1\u8272\u94A5\u5319"
+  picture: {fileID: 21300000, guid: eba1abfc3e733784dae884b1ae635573, type: 3}
   collected: 0
+  keepCollider: 0
 --- !u!65 &7927310048312092360
 BoxCollider:
   m_ObjectHideFlags: 0
