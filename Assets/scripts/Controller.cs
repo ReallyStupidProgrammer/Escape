@@ -13,9 +13,9 @@ public class Controller : MonoBehaviour {
         return Physics.Raycast((Ray) ray, out hit);
     }
 
-    private void doorOperation(GameObject door) {
+    private void rotateOperation(GameObject door) {
         if (door.tag == "locked") {
-            GameObject key = door.GetComponent<Door>().relatedKey;
+            GameObject key = door.GetComponent<Rotation>().relatedKey;
             string keyName;
             if (key == null) {
                 keyName = "$$$";
@@ -33,13 +33,13 @@ public class Controller : MonoBehaviour {
                 ItemGUI.resetSelected();
             }
         } else if (door.tag == "unlocked") {
-            door.GetComponent<Door>().open();
+            door.GetComponent<Rotation>().open();
         } 
     }
 
-    private void drawerOperation(GameObject drawer) {
+    private void moveOperation(GameObject drawer) {
         if (drawer.tag == "unlocked") {
-            drawer.GetComponent<Drawer>().open();
+            drawer.GetComponent<Movement>().move();
         } else {
             message = "未解锁";
             messageColor = Color.red;
@@ -120,10 +120,13 @@ public class Controller : MonoBehaviour {
             current = hit.collider.gameObject;
         }
         if (current != null) {
-            if (current.name.IndexOf("Door") >= 0) {
-                doorOperation(current);
-            } else if (current.name.IndexOf("drawer") >= 0) {
-                drawerOperation(current);
+            if (current.name.IndexOf("Door") >= 0 
+            || current.name.IndexOf("handle") >= 0) {
+                rotateOperation(current);
+            } else if ((current.name.IndexOf("drawer") >= 0
+                    || current.name.IndexOf("plug") >= 0) 
+                    || (current.name.IndexOf("waterCover") >= 0)) {
+                moveOperation(current);
             } else if (current.name.IndexOf("cover") >= 0) {
                 coverOperation(current);
             } else if (current.tag == "pluged") {

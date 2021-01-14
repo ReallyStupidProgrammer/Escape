@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : MonoBehaviour {
+public class Rotation : MonoBehaviour {
 
     public float origin;
     public bool reverse;
@@ -10,6 +10,8 @@ public class Door : MonoBehaviour {
     public bool leftRight;
 
     public GameObject relatedKey;
+
+    public int speed = 3;
 
     float transfer(float temp, bool added) {
         float ans = (temp + 360) % 360;
@@ -19,7 +21,8 @@ public class Door : MonoBehaviour {
     }
 
     public void open() {
-        float mouseX = Input.GetAxis("Mouse X") * 3;
+        print("test");
+        float mouseX = Input.GetAxis("Mouse X") * speed;
         float current = transform.localEulerAngles.y;
         if (reverse) {
             mouseX *= -1;
