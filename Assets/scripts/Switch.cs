@@ -10,12 +10,13 @@ public class Switch : MonoBehaviour {
 
     public GameObject water;
 
+    public GameObject waterCylinder;
+
     private void Update() {
         if (transform.localEulerAngles.y >= open - 1 && transform.localEulerAngles.y <= open + 1) {
             state = true;
-            if (!water.GetComponent<Water>().full) {
+            if (water != null && !water.GetComponent<Water>().full) {
                 water.GetComponent<Water>().waterMovement(1, 23.5f, 0.0002f);
-                water.GetComponent<Water>().full = true;
             }
         } else {
             state = false;

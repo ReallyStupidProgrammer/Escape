@@ -15,11 +15,11 @@ public class Item : MonoBehaviour {
 
     public bool keepCollider = false;
 
-    private void changeLayer(int layerNum) {
-        foreach (Transform child in gameObject.GetComponentsInChildren<Transform>()) {
+    public static void changeLayer(GameObject current, int layerNum) {
+        foreach (Transform child in current.GetComponentsInChildren<Transform>()) {
             child.gameObject.layer = layerNum;
         }
-        gameObject.layer = layerNum;
+        current.layer = layerNum;
     }
 
     public void collect() {
@@ -28,7 +28,7 @@ public class Item : MonoBehaviour {
         currentItem.GetComponent<ItemOnList>().objectName = objectName;
         currentItem.GetComponent<ItemOnList>().picture = picture;
         ItemGUI.lastItemIndex ++;
-        changeLayer(8);      
+        Item.changeLayer(gameObject, 8);      
         collected = true;
         if (!keepCollider) {
             Destroy(gameObject.GetComponent<BoxCollider>());

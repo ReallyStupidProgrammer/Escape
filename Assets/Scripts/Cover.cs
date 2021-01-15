@@ -19,7 +19,6 @@ public class Cover : MonoBehaviour {
     public void open() {
         float mouseY = -Input.GetAxis("Mouse Y") * 3;
         float current = transform.localEulerAngles.z;
-        print(current + mouseY);
         if (transfer(current + mouseY) < transfer(origin - 90)) return;
         if (transfer(current + mouseY) > transfer(origin)) return;
         transform.Rotate(0, 0, mouseY, Space.Self);
