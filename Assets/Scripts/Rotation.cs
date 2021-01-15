@@ -6,11 +6,8 @@ public class Rotation : MonoBehaviour {
 
     public float origin;
     public bool reverse;
-
     public bool leftRight;
-
     public GameObject relatedKey;
-
     public int speed = 3;
 
     float transfer(float temp, bool added) {

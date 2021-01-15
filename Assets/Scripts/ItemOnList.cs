@@ -6,11 +6,8 @@ using UnityEngine.UI;
 public class ItemOnList : MonoBehaviour {
 
     public Sprite picture = null;
-
     public string itemName = "";
-
     public string objectName = "";
-
     public int index;
 
     private void Update() {

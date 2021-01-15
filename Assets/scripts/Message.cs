@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Message : MonoBehaviour {
-    IEnumerator coroutine;
-    Text currentText;
 
-    bool started = false;
+    private IEnumerator coroutine;
+    private Text currentText;
+    private bool started = false;
 
     IEnumerator message() {
         currentText.text = Controller.message;

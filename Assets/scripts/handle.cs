@@ -5,11 +5,8 @@ using UnityEngine;
 public class Handle : MonoBehaviour {
 
     public GameObject water;
-
     public GameObject blackWater;
-
     public Material waterMat;
-
     public bool flushed = false;
     public float speed;
     public float endPosition;

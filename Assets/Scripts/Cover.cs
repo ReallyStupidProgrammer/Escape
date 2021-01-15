@@ -5,10 +5,7 @@ using UnityEngine;
 public class Cover : MonoBehaviour {
 
     public float origin;
-
     public static bool pwdCorrect = false;
-
-    //public bool upDown = true;
 
     float transfer(float temp) {
         float ans = (temp + 360) % 360;

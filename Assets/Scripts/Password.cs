@@ -4,11 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Password : MonoBehaviour {
+    
     public int index;
     public int[] correct;
     private int[] password = {0, 0, 0};
     private bool whetherCorrect = false;
     private GameObject item;
+
     public void add() {
         Text pwd = gameObject.GetComponent<Text>();
         int num = int.Parse(pwd.text);

@@ -5,9 +5,7 @@ using UnityEngine;
 public class KeyHole : MonoBehaviour {
 
     public static int lightControl = 0;
-
     public GameObject key;
-
     public bool pluged = false;
 
     public void plugin() {

@@ -7,9 +7,7 @@ public class Switch : MonoBehaviour {
     public float close;
     public float open;
     public bool state = false;
-
     public GameObject water;
-
     public GameObject waterCylinder;
 
     private void Update() {

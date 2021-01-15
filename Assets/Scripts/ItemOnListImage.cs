@@ -5,9 +5,8 @@ using UnityEngine.UI;
 
 public class ItemOnListImage : MonoBehaviour {
 
-    GameObject parentObject;
-
-    Color defaultColor;
+    private GameObject parentObject;
+    private Color defaultColor;
 
     private void Start() {
         parentObject = gameObject.transform.parent.parent.gameObject;

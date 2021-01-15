@@ -5,9 +5,7 @@ using UnityEngine;
 public class KeyRotate : MonoBehaviour {
 
     private RaycastHit hit;
-
     private double pre = 360;
-
     private bool flag = false;
 
     private bool getHit() {

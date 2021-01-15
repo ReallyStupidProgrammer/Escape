@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Computer : MonoBehaviour {
+    
     private Text currentText;
 
     private void Update() {

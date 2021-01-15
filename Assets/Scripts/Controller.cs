@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Controller : MonoBehaviour {
-    RaycastHit hit;
-    GameObject current;
+
+    private RaycastHit hit;
+    private GameObject current;
     public static string message = "";
     public static Color messageColor = Color.clear;
 

@@ -5,14 +5,10 @@ using UnityEngine;
 public class Item : MonoBehaviour {
 
     public static string selectedItemName = "";
-
     public static int selectedItemIndex = -1;
     public string objectName;
-
     public Sprite picture;
-
     public bool collected = false;
-
     public bool keepCollider = false;
 
     public static void changeLayer(GameObject current, int layerNum) {

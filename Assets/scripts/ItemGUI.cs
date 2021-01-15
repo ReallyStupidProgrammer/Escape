@@ -5,9 +5,7 @@ using UnityEngine;
 public class ItemGUI : MonoBehaviour {
 
     public GameObject buttonPrefab;
-
     public static int lastItemIndex = 0;
-
     public static List<GameObject> itemList = new List<GameObject>();
 
     private void Start() {
