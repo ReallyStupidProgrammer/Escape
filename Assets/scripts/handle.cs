@@ -6,6 +6,10 @@ public class Handle : MonoBehaviour {
 
     public GameObject water;
 
+    public GameObject blackWater;
+
+    public Material waterMat;
+
     public bool flushed = false;
 
     IEnumerator coroutine;
@@ -29,5 +33,6 @@ public class Handle : MonoBehaviour {
         print("Test");
         coroutine = waterFlush();
         StartCoroutine(coroutine);
+        blackWater.GetComponent<MeshRenderer>().material = waterMat;
     }
 }

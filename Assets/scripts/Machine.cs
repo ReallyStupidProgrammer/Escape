@@ -7,9 +7,12 @@ public class Machine : MonoBehaviour {
     public static bool machinePower = false;
 
     private void Update() {
-        if (KeyHole.lightControl >= 2 && gameObject.tag == "NoPower") {
+        if (KeyHole.lightControl >= 2) {
             gameObject.tag = "PowerOn";
             machinePower = true;
+        } else {
+            gameObject.tag = "NoPower";
+            machinePower = false;
         }
     }
 }

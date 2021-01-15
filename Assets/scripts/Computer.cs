@@ -16,8 +16,10 @@ public class Computer : MonoBehaviour {
             }
         }
         if (gameObject.name.IndexOf("computer") >= 0) {
-            if (KeyHole.lightControl >= 1 && gameObject.tag == "NoPower") 
+            if (KeyHole.lightControl >= 1) 
                 gameObject.tag = "PowerOn";
+            else 
+                gameObject.tag = "NoPower";
         }
     }
 }
