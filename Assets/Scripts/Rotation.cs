@@ -21,7 +21,6 @@ public class Rotation : MonoBehaviour {
     }
 
     public void open() {
-        print("test");
         float mouseX = Input.GetAxis("Mouse X") * speed;
         float current = transform.localEulerAngles.y;
         if (reverse) {
