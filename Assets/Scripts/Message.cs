@@ -19,15 +19,18 @@ public class Message : MonoBehaviour {
         StopCoroutine(coroutine);
     }
     public void showMessage() {
-        if (started) return;
+        if (started) StopCoroutine(coroutine);
         coroutine = message();
         started = true;
         StartCoroutine(coroutine);
     }
 
-    private void Update() {
-        if (Controller.message == "") return;
+    private void Start() {
         currentText = gameObject.GetComponent<Text>();
+    }
+
+    private void Update() {
+        if (Controller.message == "" || Controller.message == currentText.text) return;
         showMessage();
     }
 }
