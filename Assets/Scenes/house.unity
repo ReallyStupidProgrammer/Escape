@@ -8104,7 +8104,7 @@ GameObject:
   - component: {fileID: 1170926210}
   m_Layer: 0
   m_Name: blackDoor
-  m_TagString: unlocked
+  m_TagString: locked
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
