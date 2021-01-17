@@ -4,42 +4,48 @@ using UnityEngine;
 
 public class Water : MonoBehaviour {
 
-    public IEnumerator coroutine;
-    public bool full = false;
-    public GameObject switch1;
-    public GameObject switch2;
-
-    public bool invisible;
-
-    private IEnumerator waterFlush(int upDown, float endPosition, float speed) {
-        float currentPosition = gameObject.transform.localPosition.y;
-        bool flag = (upDown > 0) ? (currentPosition < endPosition) : (currentPosition > endPosition);
-        full = true;
-        while (flag) {
-            yield return null;
-            if (!full) break;
-            gameObject.transform.Translate(0, upDown * speed, 0, Space.World);
-            currentPosition = gameObject.transform.localPosition.y;
-            flag = (upDown > 0) ? (currentPosition < endPosition) : (currentPosition > endPosition);
-        }
-        StopCoroutine(coroutine);
-    }
-
-    public void waterMovement(int upDown, float endPosition, float speed) {
-        coroutine = waterFlush(upDown, endPosition, speed);
-        StartCoroutine(coroutine);
-    }
+    public GameObject[] switchFlush;
+    public GameObject[] switchAdd;
+    public bool invisibleOrMove;
+    public float upPosition;
+    public float downPosition;
+    public float speed;
 
     public void changeMat(Material newMat) {
         gameObject.GetComponent<MeshRenderer>().material = newMat;
     }
 
+    private int checkSwitch() {
+        int ans = 0;
+        for (int i = 0; i < switchAdd.Length; i ++) {
+            if (switchAdd[i].GetComponent<Switch>().state) {
+                ans += 1;
+                break;
+            }
+        }
+        for (int i = 0; i < switchFlush.Length; i ++) {
+            if (switchFlush[i].GetComponent<Switch>().state) {
+                ans -= 1;
+                break;
+            }
+        }
+        return ans;
+    }
+
     private void Update() {
-        if ((switch1 != null && !switch1.GetComponent<Switch>().state) 
-        && (switch2 != null && !switch2.GetComponent<Switch>().state)) {
-            full = false;
-            if (invisible && gameObject.layer != 8) Item.changeLayer(gameObject, 8);
-        } else if (invisible && gameObject.layer != 0) Item.changeLayer(gameObject, 0);
+        int upDown = checkSwitch();
+        if (invisibleOrMove) {
+            if (upDown > 0) Item.changeLayer(gameObject, 0);
+            else Item.changeLayer(gameObject, 8);
+        } else {
+            float currentPosition = gameObject.transform.localPosition.y;
+            if (upDown > 0 && currentPosition < upPosition) {
+                gameObject.transform.Translate(0, upDown * speed, 0, Space.World);
+            }
+            if (upDown < 0 && currentPosition > downPosition) {
+                gameObject.transform.Translate(0, upDown * speed, 0, Space.World);
+            }
+        }
     }
 
 }

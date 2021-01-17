@@ -4,20 +4,29 @@ using UnityEngine;
 
 public class Switch : MonoBehaviour {
 
-    public float close;
     public float open;
     public bool state = false;
-    public GameObject water;
-    public GameObject waterCylinder;
+    public bool rotate;
+    public bool move;
 
-    private void Update() {
+    private void rotateSwitch() {
         if (transform.localEulerAngles.y >= open - 1 && transform.localEulerAngles.y <= open + 1) {
             state = true;
-            if (water != null && !water.GetComponent<Water>().full) {
-                water.GetComponent<Water>().waterMovement(1, 23.5f, 0.0002f);
-            }
         } else {
             state = false;
         }
+    }
+
+    private void movementSwitch() {
+        if (transform.localPosition.x >= open - 0.02f && transform.localPosition.x <= open + 0.02f) {
+            state = true;
+        } else {
+            state = false;
+        }
+    }
+
+    private void Update() {
+        if (rotate) rotateSwitch();
+        else if (move) movementSwitch();
     }
 }
