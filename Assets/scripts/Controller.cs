@@ -128,9 +128,8 @@ public class Controller : MonoBehaviour {
             if (current.name.IndexOf("Door") >= 0 
             || current.name.IndexOf("handle") >= 0) {
                 rotateOperation(current);
-            } else if ((current.name.IndexOf("drawer") >= 0
-                    || current.name.IndexOf("plug") >= 0) 
-                    || (current.name.IndexOf("waterCover") >= 0)) {
+            } else if ((current.name.IndexOf("drawer") >= 0 || current.name == "plug") 
+                    || (current.name == "waterCover" || current.name == "carpet")) {
                 moveOperation(current);
             } else if (current.name.IndexOf("cover") >= 0) {
                 coverOperation(current);

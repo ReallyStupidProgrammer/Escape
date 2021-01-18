@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour {
     public float length;
     public float origin;
     public float speed;
+    public bool reverse;
 
     public void move() {
         float mouse;
@@ -17,6 +18,7 @@ public class Movement : MonoBehaviour {
             mouse = Input.GetAxis("Mouse X") * speed;
         else 
             mouse = Input.GetAxis("Mouse Y") * speed;
+        if (reverse) mouse *= -1;
         int temp = (positive) ? 1 : 0;
         if (xyz == 0) {
             if ((transform.localPosition.x >= origin + length * (temp - 1) || mouse > 0) 
