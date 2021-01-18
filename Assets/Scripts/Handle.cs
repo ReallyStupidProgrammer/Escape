@@ -11,5 +11,6 @@ public class Handle : MonoBehaviour {
         if (gameObject.GetComponent<Switch>().state) return;
         gameObject.GetComponent<Switch>().state = true;
         blackWater.GetComponent<Water>().changeMat(waterMat);
+        blackWater.GetComponent<BlackWater>().flag = true;
     }
 }

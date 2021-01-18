@@ -119,6 +119,12 @@ public class Controller : MonoBehaviour {
         handle.GetComponent<Handle>().flush();
     }
 
+    private void blackWaterOperation(GameObject blackWater) {
+        if (Item.selectedItemName == "paper") {
+            blackWater.GetComponent<BlackWater>().put();
+        }
+    }
+
     private void Update() {
         if (Input.GetMouseButtonDown(0)) {
             if (!getHit()) return;
@@ -156,6 +162,8 @@ public class Controller : MonoBehaviour {
                     message = "未通电";
                     messageColor = Color.red;
                 }   
+            } else if (current.name == "blackWater") {
+                blackWaterOperation(current);
             } else if (current.tag == "item") {
                 itemOperation(current);
             } else if (current.name.IndexOf("WoodBlank") >= 0) {

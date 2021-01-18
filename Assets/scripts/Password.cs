@@ -7,7 +7,7 @@ public class Password : MonoBehaviour {
     
     public int index;
     public int[] correct;
-    private int[] password = {0, 0, 0};
+    public int[] password;
     private bool whetherCorrect = false;
     private GameObject item;
 
