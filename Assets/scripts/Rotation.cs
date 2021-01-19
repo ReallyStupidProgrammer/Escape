@@ -31,7 +31,7 @@ public class Rotation : MonoBehaviour {
         if (reverse) {
             mouseX *= -1;
         }
-        print(current);
+        print(transform.eulerAngles);
         if (leftRight) {
             if (transfer(current + mouseX, false) > transfer(origin + 90, true)) return;
             if (transfer(current + mouseX, false) < transfer(origin, false)) return;
@@ -39,6 +39,7 @@ public class Rotation : MonoBehaviour {
             if (transfer(current + mouseX, false) < transfer(origin - 90, false)) return;
             if (transfer(current + mouseX, false) > transfer(origin, true)) return;
         }
+        print("test");
         if (xyz == 0)
             transform.Rotate(mouseX, 0, 0, Space.World);
         else if (xyz == 1)

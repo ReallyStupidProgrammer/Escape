@@ -11,6 +11,7 @@ public class CD : MonoBehaviour {
     private bool added = false;
 
     private void Update() {
+        if (relatedObject == null) return;
         if (!added && relatedObject.GetComponent<Item>().collected) {
             added = true;
             gameObject.AddComponent<Item>();
