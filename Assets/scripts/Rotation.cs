@@ -9,6 +9,7 @@ public class Rotation : MonoBehaviour {
     public bool leftRight;
     public GameObject relatedKey;
     public int speed = 3;
+    public int xyz = 1;
 
     float transfer(float temp, bool added) {
         float ans = (temp + 360) % 360;
@@ -19,10 +20,18 @@ public class Rotation : MonoBehaviour {
 
     public void open() {
         float mouseX = Input.GetAxis("Mouse X") * speed;
-        float current = transform.localEulerAngles.y;
+        float current;
+        if (xyz == 0)
+            current = transform.localEulerAngles.x;
+        else if (xyz == 1)
+            current = transform.localEulerAngles.y;
+        else if (xyz == 2)
+            current = transform.localEulerAngles.z;
+        else return;
         if (reverse) {
             mouseX *= -1;
         }
+        print(current);
         if (leftRight) {
             if (transfer(current + mouseX, false) > transfer(origin + 90, true)) return;
             if (transfer(current + mouseX, false) < transfer(origin, false)) return;
@@ -30,6 +39,12 @@ public class Rotation : MonoBehaviour {
             if (transfer(current + mouseX, false) < transfer(origin - 90, false)) return;
             if (transfer(current + mouseX, false) > transfer(origin, true)) return;
         }
-        transform.Rotate(0, mouseX, 0, Space.World);
+        if (xyz == 0)
+            transform.Rotate(mouseX, 0, 0, Space.World);
+        else if (xyz == 1)
+            transform.Rotate(0, mouseX, 0, Space.World);
+        else if (xyz == 2)
+            transform.Rotate(0, 0, mouseX, Space.World);
+        
     }
 }
