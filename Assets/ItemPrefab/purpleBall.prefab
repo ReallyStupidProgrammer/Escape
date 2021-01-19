@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 5887856382480647946}
   - component: {fileID: 5887856382480647949}
   - component: {fileID: 5887856382480647948}
+  - component: {fileID: 8015415201282817798}
   m_Layer: 0
   m_Name: purpleBall
-  m_TagString: Untagged
+  m_TagString: item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,3 +113,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8015415201282817798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5887856382480647951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f87e1765a61e0449b8e2efa5998bfd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectName: "\u7D2B\u8272\u5C0F\u7403"
+  picture: {fileID: 21300000, guid: 52720a20ed2d48442acaa96d396ecc7f, type: 3}
+  collected: 0
+  keepCollider: 0
