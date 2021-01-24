@@ -101,6 +101,7 @@ public class Controller : MonoBehaviour {
         }
         if (Item.selectedItemName == screen.GetComponent<Screen>().relatedItem.name) {
             screen.GetComponent<Screen>().crash();
+            ItemGUI.updateItemList(Item.selectedItemIndex);
             ItemGUI.resetSelected();
         }
     }
@@ -123,6 +124,18 @@ public class Controller : MonoBehaviour {
         if (Item.selectedItemName == "paper") {
             blackWater.GetComponent<BlackWater>().put();
         }
+    }
+
+    private void pipeOperation(GameObject pipe) {
+        if (pipe.GetComponent<Pipe>().CDPipe) {
+            pipe.GetComponent<Pipe>().putCD();
+        } else {
+            pipe.GetComponent<Pipe>().removePipe();
+        }
+    }
+
+    private void nailOperation(GameObject nail) {
+        nail.GetComponent<Nail>().removeNail();
     }
 
     private void Update() {
@@ -164,6 +177,10 @@ public class Controller : MonoBehaviour {
                 }   
             } else if (current.name == "blackWater") {
                 blackWaterOperation(current);
+            } else if (current.name.IndexOf("pipe") >= 0) {
+                pipeOperation(current);
+            } else if (current.name.IndexOf("nail") >= 0) {
+                nailOperation(current);
             } else if (current.tag == "item") {
                 itemOperation(current);
             } else if (current.name.IndexOf("WoodBlank") >= 0) {
