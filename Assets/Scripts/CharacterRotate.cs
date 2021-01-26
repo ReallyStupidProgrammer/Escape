@@ -8,7 +8,7 @@ public class CharacterRotate : MonoBehaviour {
         if (Input.GetMouseButton(1)) {
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
-            float mouseY = Input.GetAxis("Mouse Y") * 3;
+            float mouseY = Input.GetAxis("Mouse Y") * 2;
             transform.Rotate(-mouseY, 0, 0, Space.Self);
         }
         else {

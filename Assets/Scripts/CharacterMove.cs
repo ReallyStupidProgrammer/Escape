@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterMove : MonoBehaviour {
-    public int Speed = 300000;
+    public int Speed = 100000;
     private CharacterController controller;
 
     void Start() {
@@ -16,7 +16,7 @@ public class CharacterMove : MonoBehaviour {
             controller.Move(transform.rotation * dir * (Speed * Time.deltaTime));
         
         if (Input.GetMouseButton(1)) {
-            float mouseX = Input.GetAxis("Mouse X") * 3;
+            float mouseX = Input.GetAxis("Mouse X") * 2;
             transform.Rotate(0, mouseX, 0, Space.World);
         }
     }
