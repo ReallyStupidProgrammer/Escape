@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 0c80cdc588cd233469bfd0783a032bdc, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: e8f2692691967ce42a8e88c992afb1b2, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 3d845e458c30f1644b0d509a2833174d, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -3879,12 +3879,12 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 55
-  m_RenderingPath: -1
+  m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -7081,7 +7081,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
+  m_Intensity: 1
   m_Range: 13.33391
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -9321,7 +9321,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 8
+  m_Intensity: 2
   m_Range: 9.113213
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -9360,7 +9360,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -16140,7 +16140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960107552}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.00009813332, y: -0.0007, z: 0.00912}
+  m_LocalPosition: {x: -0.00009813332, y: -0.0007, z: 0.00959}
   m_LocalScale: {x: 0.0033333332, y: 0.003333334, z: 0.003333334}
   m_Children: []
   m_Father: {fileID: 809980152093057497}
@@ -16158,8 +16158,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3
-  m_Range: 10.09563
+  m_Intensity: 2
+  m_Range: 7.486047
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -19566,7 +19566,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &3513729505216300401
 BoxCollider:
