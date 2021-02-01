@@ -6,6 +6,7 @@ public class Controller : MonoBehaviour {
 
     private RaycastHit hit;
     private GameObject current;
+    private bool pipeDestroyed = false;
     public static string message = "";
     public static Color messageColor = Color.clear;
 
@@ -49,15 +50,6 @@ public class Controller : MonoBehaviour {
 
     private void pwdOperation(GameObject pwd) {
         pwd.GetComponent<Password>().add();
-    }
-
-    private void transmitOperation(GameObject transmition) {
-        // message = transmition.GetComponent<Transmit>().message;
-        // messageColor = Color.green;
-        // int upDown = transmition.GetComponent<Transmit>().upDown;
-        // transform.position = new Vector3(transform.position.x, 
-        //                                  transform.position.y + upDown * 26, 
-        //                                  transform.position.z);
     }
 
     private void computerOperation(GameObject computer) {
@@ -127,10 +119,13 @@ public class Controller : MonoBehaviour {
     }
 
     private void pipeOperation(GameObject pipe) {
-        if (pipe.GetComponent<Pipe>().CDPipe) {
+        if ((pipe.GetComponent<Pipe>().CDPipe 
+          && Item.selectedItemName == "CD")
+          && pipeDestroyed) {
             pipe.GetComponent<Pipe>().putCD();
         } else {
             pipe.GetComponent<Pipe>().removePipe();
+            pipeDestroyed = true;
         }
     }
 
@@ -162,8 +157,6 @@ public class Controller : MonoBehaviour {
         if (Input.GetMouseButtonUp(0)) {
             if (current.name.IndexOf("Pwd") >= 0) {
                 pwdOperation(current);
-            } else if (current.name.IndexOf("Transmition") >= 0) {
-                transmitOperation(current);
             } else if (current.name.IndexOf("computer") >= 0) {
                 computerOperation(current);
             } else if (current.name.IndexOf("KeyHole") >= 0) {

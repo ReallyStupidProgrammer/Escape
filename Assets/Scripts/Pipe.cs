@@ -14,7 +14,7 @@ public class Pipe : MonoBehaviour {
     public void putCD() {
         if (flag) return;
         GameObject newCD = Instantiate(CD,
-                                       new Vector3(5.033f, -1.991f, -4.63f),
+                                       new Vector3(6.411f, -1.991f, -3.275f),
                                        new Quaternion(0, 0, 0, 0));
         flag = true;
     }
