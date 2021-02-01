@@ -52,12 +52,12 @@ public class Controller : MonoBehaviour {
     }
 
     private void transmitOperation(GameObject transmition) {
-        message = transmition.GetComponent<Transmit>().message;
-        messageColor = Color.green;
-        int upDown = transmition.GetComponent<Transmit>().upDown;
-        transform.position = new Vector3(transform.position.x, 
-                                         transform.position.y + upDown * 26, 
-                                         transform.position.z);
+        // message = transmition.GetComponent<Transmit>().message;
+        // messageColor = Color.green;
+        // int upDown = transmition.GetComponent<Transmit>().upDown;
+        // transform.position = new Vector3(transform.position.x, 
+        //                                  transform.position.y + upDown * 26, 
+        //                                  transform.position.z);
     }
 
     private void computerOperation(GameObject computer) {
