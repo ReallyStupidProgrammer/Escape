@@ -41,6 +41,10 @@ public class Transmit : MonoBehaviour
     private void Update() {
         if (checkPosition()) {
             if (flag) return;
+            if (Controller.message != "") {
+                flag = true;
+                return;
+            }
             flag = true;
             notification.SetActive(true);
             notification.GetComponentInChildren<Text>().text = "是否前往" + message;
