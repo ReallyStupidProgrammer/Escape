@@ -16,7 +16,7 @@ public class CharacterMove : MonoBehaviour {
             controller.Move(transform.rotation * dir * (Speed * Time.deltaTime));
         
         if (Input.GetMouseButton(1)) {
-            float mouseX = Input.GetAxis("Mouse X") * 2;
+            float mouseX = Input.GetAxis("Mouse X") * 3;
             transform.Rotate(0, mouseX, 0, Space.World);
         }
     }

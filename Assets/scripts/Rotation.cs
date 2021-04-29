@@ -7,6 +7,7 @@ public class Rotation : MonoBehaviour {
     public float origin;
     public bool reverse;
     public bool leftRight;
+    public bool mouseXY = true;
     public GameObject relatedKey;
     public int speed = 3;
     public int xyz = 1;
@@ -19,7 +20,8 @@ public class Rotation : MonoBehaviour {
     }
 
     public void open() {
-        float mouseX = Input.GetAxis("Mouse X") * speed;
+        string mouseName = (mouseXY) ? "Mouse X" : "Mouse Y";
+        float mouse = Input.GetAxis(mouseName) * speed;
         float current;
         if (xyz == 0)
             current = transform.localEulerAngles.x;
@@ -29,21 +31,22 @@ public class Rotation : MonoBehaviour {
             current = transform.localEulerAngles.z;
         else return;
         if (reverse) {
-            mouseX *= -1;
+            mouse *= -1;
         }
+        
         if (leftRight) {
-            if (transfer(current + mouseX, false) > transfer(origin + 90, true)) return;
-            if (transfer(current + mouseX, false) < transfer(origin, false)) return;
+            if (transfer(current + mouse, false) > transfer(origin + 90, true)) return;
+            if (transfer(current + mouse, false) < transfer(origin, false)) return;
         } else {
-            if (transfer(current + mouseX, false) < transfer(origin - 90, false)) return;
-            if (transfer(current + mouseX, false) > transfer(origin, true)) return;
+            if (transfer(current + mouse, false) < transfer(origin - 90, false)) return;
+            if (transfer(current + mouse, false) > transfer(origin, true)) return;
         }
         if (xyz == 0)
-            transform.Rotate(mouseX, 0, 0, Space.World);
+            transform.Rotate(mouse, 0, 0, Space.World);
         else if (xyz == 1)
-            transform.Rotate(0, mouseX, 0, Space.World);
+            transform.Rotate(0, mouse, 0, Space.World);
         else if (xyz == 2)
-            transform.Rotate(0, 0, mouseX, Space.World);
+            transform.Rotate(0, 0, mouse, Space.World);
         
     }
 }

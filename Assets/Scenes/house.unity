@@ -1653,6 +1653,7 @@ MonoBehaviour:
   origin: 90
   reverse: 0
   leftRight: 1
+  mouseXY: 1
   relatedKey: {fileID: 0}
   speed: 3
   xyz: 1
@@ -2148,6 +2149,7 @@ MonoBehaviour:
   origin: 135
   reverse: 0
   leftRight: 1
+  mouseXY: 1
   relatedKey: {fileID: 1628889884}
   speed: 3
   xyz: 1
@@ -2509,6 +2511,7 @@ MonoBehaviour:
   origin: 0
   reverse: 0
   leftRight: 0
+  mouseXY: 1
   relatedKey: {fileID: 0}
   speed: 15
   xyz: 1
@@ -3507,7 +3510,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -9161143425411863924, guid: c352d8e930a1e414cb48d6914fef7de9, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c352d8e930a1e414cb48d6914fef7de9, type: 3}
       propertyPath: m_RootOrder
@@ -3603,7 +3606,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4988151476611263084, guid: c352d8e930a1e414cb48d6914fef7de9, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3025669045612628392, guid: c352d8e930a1e414cb48d6914fef7de9, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3667,6 +3670,7 @@ MonoBehaviour:
   origin: 360
   reverse: 1
   leftRight: 0
+  mouseXY: 1
   relatedKey: {fileID: 0}
   speed: 3
   xyz: 1
@@ -4349,6 +4353,144 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303139367}
   m_CullTransparentMesh: 0
+--- !u!1001 &309034230
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+      propertyPath: m_RootOrder
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.021
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 24.291
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8139278606610809618, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+      propertyPath: m_TagString
+      value: unlocked
+      objectReference: {fileID: 0}
+    - target: {fileID: -4819223349682164798, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: -1626349782603668768, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+      propertyPath: m_Name
+      value: piano
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321902484786968023, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321902484786968023, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321902484786968023, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321902484786968023, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321902484786968023, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+--- !u!1 &309034231 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8139278606610809618, guid: 79fcd3efcd370a849a1c565c144af143, type: 3}
+  m_PrefabInstance: {fileID: 309034230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &309034232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309034231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ff6cb7f33f1adc42a7adaa4155c91f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  origin: 0
+  reverse: 0
+  leftRight: 1
+  mouseXY: 0
+  relatedKey: {fileID: 0}
+  speed: 3
+  xyz: 0
+--- !u!65 &309034233
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309034231}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9999999, y: 2.2, z: 16}
+  m_Center: {x: 0, y: -1.1, z: -8}
 --- !u!1 &342441044
 GameObject:
   m_ObjectHideFlags: 0
@@ -4695,6 +4837,7 @@ MonoBehaviour:
   origin: 0
   reverse: 1
   leftRight: 0
+  mouseXY: 1
   relatedKey: {fileID: 0}
   speed: 3
   xyz: 1
@@ -5232,6 +5375,7 @@ MonoBehaviour:
   origin: 0
   reverse: 1
   leftRight: 1
+  mouseXY: 1
   relatedKey: {fileID: 0}
   speed: 15
   xyz: 1
@@ -7560,7 +7704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 64bfbfb55a0c34648ac6ba5b8cf78228, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.69
+      value: 4.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 64bfbfb55a0c34648ac6ba5b8cf78228, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8271,6 +8415,7 @@ MonoBehaviour:
   origin: 0
   reverse: 1
   leftRight: 1
+  mouseXY: 1
   relatedKey: {fileID: 0}
   speed: 15
   xyz: 1
@@ -8853,6 +8998,7 @@ MonoBehaviour:
   origin: 270
   reverse: 0
   leftRight: 1
+  mouseXY: 1
   relatedKey: {fileID: 0}
   speed: 3
   xyz: 1
@@ -9413,6 +9559,7 @@ MonoBehaviour:
   origin: 0
   reverse: 1
   leftRight: 0
+  mouseXY: 1
   relatedKey: {fileID: 919132148191299454}
   speed: 3
   xyz: 1
@@ -11132,6 +11279,7 @@ MonoBehaviour:
   origin: 270
   reverse: 0
   leftRight: 1
+  mouseXY: 1
   relatedKey: {fileID: 798315502}
   speed: 3
   xyz: 1
@@ -11334,6 +11482,7 @@ MonoBehaviour:
   origin: 0
   reverse: 0
   leftRight: 1
+  mouseXY: 1
   relatedKey: {fileID: 6559714871308165988}
   speed: 3
   xyz: 1
@@ -12987,6 +13136,7 @@ MonoBehaviour:
   origin: 0
   reverse: 0
   leftRight: 0
+  mouseXY: 1
   relatedKey: {fileID: 0}
   speed: 10
   xyz: 0
@@ -13778,7 +13928,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5743350618785959237, guid: c358dade18cb26b42a4c80b3eba35a6b, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5252614058741765545, guid: c358dade18cb26b42a4c80b3eba35a6b, type: 3}
       propertyPath: m_TagString
@@ -14796,6 +14946,7 @@ MonoBehaviour:
   origin: 135
   reverse: 0
   leftRight: 1
+  mouseXY: 1
   relatedKey: {fileID: 3124005646180981370, guid: d375fae590980c84e985ec7a7b81a775, type: 3}
   speed: 3
   xyz: 1
@@ -15079,6 +15230,7 @@ MonoBehaviour:
   origin: 0
   reverse: 0
   leftRight: 1
+  mouseXY: 1
   relatedKey: {fileID: 753635974428865965}
   speed: 3
   xyz: 1
@@ -17729,7 +17881,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854322190}
   m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: -1.083, y: -1.8, z: 10.421}
+  m_LocalPosition: {x: -9.18, y: 24.2, z: 8.869}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 342441047}
@@ -17873,6 +18025,7 @@ MonoBehaviour:
   origin: 270
   reverse: 0
   leftRight: 1
+  mouseXY: 1
   relatedKey: {fileID: 5237906562314449621}
   speed: 3
   xyz: 1
@@ -19059,6 +19212,7 @@ MonoBehaviour:
   origin: -135
   reverse: 0
   leftRight: 1
+  mouseXY: 1
   relatedKey: {fileID: 0}
   speed: 3
   xyz: 1
@@ -19494,6 +19648,7 @@ MonoBehaviour:
   origin: 0
   reverse: 1
   leftRight: 0
+  mouseXY: 1
   relatedKey: {fileID: 0}
   speed: 15
   xyz: 1
@@ -22194,6 +22349,7 @@ MonoBehaviour:
   origin: 0
   reverse: 1
   leftRight: 1
+  mouseXY: 1
   relatedKey: {fileID: 0}
   speed: 3
   xyz: 1
