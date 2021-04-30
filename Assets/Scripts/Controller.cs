@@ -133,6 +133,10 @@ public class Controller : MonoBehaviour {
         nail.GetComponent<Nail>().removeNail();
     }
 
+    private void pianoKeyOperation(GameObject pianoKey) {
+        pianoKey.GetComponent<PianoKey>().push();
+    }
+
     private void Update() {
         if (Input.GetMouseButtonDown(0)) {
             if (!getHit()) return;
@@ -178,6 +182,8 @@ public class Controller : MonoBehaviour {
                 itemOperation(current);
             } else if (current.name.IndexOf("WoodBlank") >= 0) {
                 woodBlankOperation(current);
+            } else if (current.name.IndexOf("pianokey") >= 0) {
+                pianoKeyOperation(current);
             } 
             current = null;
         }
