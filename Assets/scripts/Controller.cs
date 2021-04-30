@@ -123,6 +123,8 @@ public class Controller : MonoBehaviour {
           && Item.selectedItemName == "CD")
           && pipeDestroyed) {
             pipe.GetComponent<Pipe>().putCD();
+            ItemGUI.updateItemList(Item.selectedItemIndex);
+            ItemGUI.resetSelected();
         } else {
             pipe.GetComponent<Pipe>().removePipe();
             pipeDestroyed = true;

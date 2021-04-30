@@ -382,7 +382,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.5
   m_Range: 5.537464
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -8193,7 +8193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3968638302179896169, guid: 4560605f42d30534ab41f954fe2982dd, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4560605f42d30534ab41f954fe2982dd, type: 3}
@@ -16865,7 +16865,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.2
   m_Range: 5.8394704
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -26809,7 +26809,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1837468666301910550, guid: b2e1512bf9a29f84cb2c43393e5584b0, type: 3}
+  - {fileID: 2100000, guid: d68941423aad0674687d67fbcb06f76b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
