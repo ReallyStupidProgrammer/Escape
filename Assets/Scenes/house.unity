@@ -965,7 +965,7 @@ MonoBehaviour:
   index: 0
   correct: 
   password: 000000000000000000000000
-  power: 1
+  dependentObject: {fileID: 0}
 --- !u!65 &63340489
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1993,7 +1993,7 @@ MonoBehaviour:
   index: 2
   correct: 
   password: 
-  power: 0
+  dependentObject: {fileID: 3885757297207365293}
 --- !u!65 &144187656
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4007,7 +4007,7 @@ MonoBehaviour:
   index: 1
   correct: 
   password: 000000000000000000000000
-  power: 1
+  dependentObject: {fileID: 0}
 --- !u!114 &272613821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5179,7 +5179,7 @@ MonoBehaviour:
   index: 0
   correct: 020000000500000007000000
   password: 000000000000000000000000
-  power: 1
+  dependentObject: {fileID: 0}
 --- !u!1 &303139367
 GameObject:
   m_ObjectHideFlags: 0
@@ -7420,7 +7420,7 @@ MonoBehaviour:
   index: 0
   correct: 
   password: 
-  power: 0
+  dependentObject: {fileID: 3885757297207365293}
 --- !u!65 &462349503
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7926,6 +7926,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &512298176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7807689773013409703, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+  m_PrefabInstance: {fileID: 750278106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &522875842
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8826,7 +8831,7 @@ MonoBehaviour:
   index: 0
   correct: 
   password: 000000000000000000000000
-  power: 1
+  dependentObject: {fileID: 0}
 --- !u!114 &613071857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9738,7 +9743,7 @@ MonoBehaviour:
   index: 8
   correct: 
   password: 
-  power: 0
+  dependentObject: {fileID: 3885757297207365293}
 --- !u!65 &698302392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10063,6 +10068,99 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2855973010345413534, guid: 704f46da02f6ac64d90e9dbc7836ff3d, type: 3}
   m_PrefabInstance: {fileID: 746992818}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &750278106
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+      propertyPath: m_RootOrder
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1691
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 24.939
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.264
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4414478188986416911, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 72721e5d5a634b54c84f3f899be51dd9, type: 2}
+    - target: {fileID: 919132149155446097, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+      propertyPath: m_Name
+      value: star
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697561394380073321, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 76b2a951316f4fd4dbd3c19d20d50c09, type: 2}
+    - target: {fileID: 4123163902568658351, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4fa49f9ef0e308c45928968d04c08e5e, type: 2}
+    - target: {fileID: 5144046954450947208, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f8f842d0cd03a741be245e6af8188ab, type: 2}
+    - target: {fileID: 6038550813985070005, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 46497e4679560ab48bd5d1b88f3d8536, type: 2}
+    - target: {fileID: 8423352251568012719, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f8f842d0cd03a741be245e6af8188ab, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
 --- !u!1001 &751620662
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11061,7 +11159,7 @@ MonoBehaviour:
   index: 4
   correct: 
   password: 
-  power: 0
+  dependentObject: {fileID: 3885757297207365293}
 --- !u!65 &828456178
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12367,7 +12465,7 @@ MonoBehaviour:
   index: 1
   correct: 
   password: 000000000000000000000000
-  power: 1
+  dependentObject: {fileID: 0}
 --- !u!114 &901114579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12410,6 +12508,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901114574}
   m_CullTransparentMesh: 0
+--- !u!1 &912547658 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1721506880926986558, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+  m_PrefabInstance: {fileID: 750278106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &913511072
 GameObject:
   m_ObjectHideFlags: 0
@@ -14659,6 +14762,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2855973010345413534, guid: 704f46da02f6ac64d90e9dbc7836ff3d, type: 3}
   m_PrefabInstance: {fileID: 1119066724}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1121149585 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5361281312315068073, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+  m_PrefabInstance: {fileID: 750278106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1122704549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14736,6 +14844,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 70c35c3c46c9b0e40be609b954d4a58c, type: 3}
   m_PrefabInstance: {fileID: 1122704549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1124162258 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -164157393541769141, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+  m_PrefabInstance: {fileID: 750278106}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1136397440
 PrefabInstance:
@@ -15864,7 +15977,7 @@ MonoBehaviour:
   index: 6
   correct: 
   password: 
-  power: 0
+  dependentObject: {fileID: 3885757297207365293}
 --- !u!65 &1223473633
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16401,7 +16514,7 @@ MonoBehaviour:
   index: 1
   correct: 
   password: 
-  power: 0
+  dependentObject: {fileID: 3885757297207365293}
 --- !u!65 &1297288615
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16415,6 +16528,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 216.10854, y: 448.39398, z: 0.0008305986}
   m_Center: {x: 1.94134, y: 6.1271634, z: 0.007127403}
+--- !u!1 &1297329231 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+  m_PrefabInstance: {fileID: 750278106}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1297329232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297329231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4935d7a6dc6a11244aff79721fdfc8c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  purpleCorn: {fileID: 1124162258}
+  blueCorn: {fileID: 512298176}
+  cyanCorn: {fileID: 912547658}
+  yellowCorn: {fileID: 1121149585}
+  middle: {fileID: 1768250545}
 --- !u!1 &1303845664
 GameObject:
   m_ObjectHideFlags: 0
@@ -16512,7 +16647,7 @@ MonoBehaviour:
   index: 2
   correct: 
   password: 000000000000000000000000
-  power: 1
+  dependentObject: {fileID: 0}
 --- !u!114 &1303845669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17141,7 +17276,7 @@ MonoBehaviour:
   index: 2
   correct: 
   password: 000000000000000000000000
-  power: 1
+  dependentObject: {fileID: 0}
 --- !u!114 &1349353677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17646,7 +17781,7 @@ MonoBehaviour:
   index: 5
   correct: 
   password: 
-  power: 0
+  dependentObject: {fileID: 3885757297207365293}
 --- !u!65 &1407209157
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20574,7 +20709,7 @@ MonoBehaviour:
   index: 10
   correct: 
   password: 
-  power: 0
+  dependentObject: {fileID: 3885757297207365293}
 --- !u!65 &1678075477
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21084,7 +21219,7 @@ MonoBehaviour:
   index: 9
   correct: 
   password: 
-  power: 0
+  dependentObject: {fileID: 3885757297207365293}
 --- !u!65 &1708613828
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21416,7 +21551,7 @@ MonoBehaviour:
   index: 3
   correct: 
   password: 
-  power: 0
+  dependentObject: {fileID: 3885757297207365293}
 --- !u!65 &1742674778
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21642,7 +21777,7 @@ MonoBehaviour:
   index: 7
   correct: 
   password: 
-  power: 0
+  dependentObject: {fileID: 3885757297207365293}
 --- !u!65 &1755962243
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22034,6 +22169,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767887363}
   m_CullTransparentMesh: 0
+--- !u!1 &1768250545 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1256841003522951573, guid: f04439b5ef79d84498c909dd1cdbd952, type: 3}
+  m_PrefabInstance: {fileID: 750278106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1778020401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22327,7 +22467,7 @@ MonoBehaviour:
   index: 2
   correct: 
   password: 000000000000000000000000
-  power: 1
+  dependentObject: {fileID: 0}
 --- !u!114 &1793187462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24995,7 +25135,7 @@ MonoBehaviour:
   index: 1
   correct: 
   password: 000000000000000000000000
-  power: 1
+  dependentObject: {fileID: 0}
 --- !u!114 &2032431300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26211,7 +26351,7 @@ MonoBehaviour:
   index: 0
   correct: 
   password: 000000000000000000000000
-  power: 1
+  dependentObject: {fileID: 0}
 --- !u!114 &2126292629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27178,7 +27318,7 @@ MonoBehaviour:
   index: 0
   correct: 060000000100000004000000
   password: 000000000000000000000000
-  power: 1
+  dependentObject: {fileID: 0}
 --- !u!114 &930622131715871837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29281,7 +29421,7 @@ MonoBehaviour:
   index: 0
   correct: 0100000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   password: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  power: 1
+  dependentObject: {fileID: 0}
 --- !u!114 &3885757297207365295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29753,7 +29893,7 @@ Transform:
   - {fileID: 915560887}
   - {fileID: 659236556}
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4655412215433676301
 Transform:
@@ -31028,7 +31168,7 @@ MonoBehaviour:
   index: 0
   correct: 030000000700000004000000
   password: 000000000000000000000000
-  power: 1
+  dependentObject: {fileID: 0}
 --- !u!114 &6102135229096449991
 MonoBehaviour:
   m_ObjectHideFlags: 0
