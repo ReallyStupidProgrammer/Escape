@@ -8,10 +8,12 @@ public class Password : MonoBehaviour {
     public int index;
     public int[] correct;
     public int[] password;
+    public bool power = true;
     private bool whetherCorrect = false;
     private GameObject item;
 
     public void add() {
+        if (!power) return;
         Text pwd = gameObject.GetComponent<Text>();
         int num = int.Parse(pwd.text);
         num = (num + 1) % 10;
