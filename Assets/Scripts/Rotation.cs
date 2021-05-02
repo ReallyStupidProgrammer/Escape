@@ -11,6 +11,7 @@ public class Rotation : MonoBehaviour {
     public GameObject relatedKey;
     public int speed = 3;
     public int xyz = 1;
+    public bool world = true;
 
     float transfer(float temp, bool added) {
         float ans = (temp + 360) % 360;
@@ -33,7 +34,6 @@ public class Rotation : MonoBehaviour {
         if (reverse) {
             mouse *= -1;
         }
-        
         if (leftRight) {
             if (transfer(current + mouse, false) > transfer(origin + 90, true)) return;
             if (transfer(current + mouse, false) < transfer(origin, false)) return;
@@ -41,12 +41,21 @@ public class Rotation : MonoBehaviour {
             if (transfer(current + mouse, false) < transfer(origin - 90, false)) return;
             if (transfer(current + mouse, false) > transfer(origin, true)) return;
         }
-        if (xyz == 0)
-            transform.Rotate(mouse, 0, 0, Space.World);
-        else if (xyz == 1)
-            transform.Rotate(0, mouse, 0, Space.World);
-        else if (xyz == 2)
-            transform.Rotate(0, 0, mouse, Space.World);
+        if (world) {
+            if (xyz == 0)
+                transform.Rotate(mouse, 0, 0, Space.World);
+            else if (xyz == 1)
+                transform.Rotate(0, mouse, 0, Space.World);
+            else if (xyz == 2)
+                transform.Rotate(0, 0, mouse, Space.World);
+        } else {
+            if (xyz == 0)
+                transform.Rotate(mouse, 0, 0, Space.Self);
+            else if (xyz == 1)
+                transform.Rotate(0, mouse, 0, Space.Self);
+            else if (xyz == 2)
+                transform.Rotate(0, 0, mouse, Space.Self);
+        }
         
     }
 }

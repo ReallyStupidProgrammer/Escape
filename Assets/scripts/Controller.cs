@@ -139,6 +139,10 @@ public class Controller : MonoBehaviour {
         pianoKey.GetComponent<PianoKey>().push();
     }
 
+    private void lockOperation(GameObject suitecaseLock) {
+        suitecaseLock.GetComponent<SuitecaseLock>().unlock();
+    }
+
     private void Update() {
         if (Input.GetMouseButtonDown(0)) {
             if (!getHit()) return;
@@ -186,6 +190,8 @@ public class Controller : MonoBehaviour {
                 woodBlankOperation(current);
             } else if (current.name.IndexOf("pianokey") >= 0) {
                 pianoKeyOperation(current);
+            } else if (current.name.IndexOf("Lock") >= 0) {
+                lockOperation(current);
             } 
             current = null;
         }
