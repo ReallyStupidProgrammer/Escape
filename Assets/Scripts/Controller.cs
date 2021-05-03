@@ -10,6 +10,13 @@ public class Controller : MonoBehaviour {
     public static string message = "";
     public static Color messageColor = Color.clear;
 
+    private void Start() {
+        Ball.ballColor.Add("yellowBall", Color.yellow);
+        Ball.ballColor.Add("purpleBall", Color.magenta);
+        Ball.ballColor.Add("cyanBall", Color.cyan);
+        Ball.ballColor.Add("blueBall", Color.blue);
+    }
+
     bool getHit() {
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         return Physics.Raycast((Ray) ray, out hit);
@@ -143,6 +150,10 @@ public class Controller : MonoBehaviour {
         suitecaseLock.GetComponent<SuitecaseLock>().unlock();
     }
 
+    private void ballOperation(GameObject ball) {
+        ball.GetComponent<Ball>().operation();
+    }
+
     private void Update() {
         if (Input.GetMouseButtonDown(0)) {
             if (!getHit()) return;
@@ -192,7 +203,9 @@ public class Controller : MonoBehaviour {
                 pianoKeyOperation(current);
             } else if (current.name.IndexOf("Lock") >= 0) {
                 lockOperation(current);
-            } 
+            } else if (current.tag == "ball") {
+                ballOperation(current);
+            }
             current = null;
         }
 
