@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour {
 
+    public static string message = "";
+    public static Color messageColor = Color.clear;
+    public static Color purple = new Color32(101, 0, 255, 255);
     private RaycastHit hit;
     private GameObject current;
     private bool pipeDestroyed = false;
-    public static string message = "";
-    public static Color messageColor = Color.clear;
 
     private void Start() {
         Ball.ballColor.Add("yellowBall", Color.yellow);
-        Ball.ballColor.Add("purpleBall", Color.magenta);
+        Ball.ballColor.Add("purpleBall", purple);
         Ball.ballColor.Add("cyanBall", Color.cyan);
         Ball.ballColor.Add("blueBall", Color.blue);
     }

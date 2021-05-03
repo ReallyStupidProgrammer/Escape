@@ -15,7 +15,6 @@ public class Ball : MonoBehaviour {
         ItemGUI.updateItemList(Item.selectedItemIndex);
         ItemGUI.resetSelected();
         Item.changeLayer(gameObject, 0);
-        print("test");
     }
 
     public void operation() {
@@ -23,7 +22,7 @@ public class Ball : MonoBehaviour {
             put();
         } else if (gameObject.layer == 0) {
             gameObject.GetComponent<Item>().collect();
-            print("test1");
+            gameObject.name = "invisible_" + gameObject.name;
         }
     }
 }
