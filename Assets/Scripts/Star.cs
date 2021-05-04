@@ -11,7 +11,7 @@ public class Star : MonoBehaviour {
     public GameObject woodenTable = null;
     private int[] checkSum = {0, 0, 0, 0};
 
-    private static void changeEmissionColor(GameObject obj, Color color) {
+    public static void changeEmissionColor(GameObject obj, Color color) {
         obj.GetComponent<Renderer>().material.SetColor("_EmissionColor", color);
         obj.GetComponent<Renderer>().material.SetColor("_Color", (color == Color.red) ? Color.white : color);
     }
