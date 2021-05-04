@@ -5,6 +5,7 @@ using UnityEngine;
 public class Rotation : MonoBehaviour {
 
     public float origin;
+    public float amount = 90;
     public bool reverse;
     public bool leftRight;
     public bool mouseXY = true;
@@ -35,10 +36,10 @@ public class Rotation : MonoBehaviour {
             mouse *= -1;
         }
         if (leftRight) {
-            if (transfer(current + mouse, false) > transfer(origin + 90, true)) return;
+            if (transfer(current + mouse, false) > transfer(origin + amount, true)) return;
             if (transfer(current + mouse, false) < transfer(origin, false)) return;
         } else {
-            if (transfer(current + mouse, false) < transfer(origin - 90, false)) return;
+            if (transfer(current + mouse, false) < transfer(origin - amount, false)) return;
             if (transfer(current + mouse, false) > transfer(origin, true)) return;
         }
         if (world) {

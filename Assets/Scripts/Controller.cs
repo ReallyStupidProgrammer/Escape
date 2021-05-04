@@ -159,6 +159,10 @@ public class Controller : MonoBehaviour {
         lockHandle.GetComponent<WallControlBox>().open();
     }
 
+    private void pusherOperation(GameObject pusher) {
+        pusher.GetComponent<Pusher>().push();
+    }
+
     private void Update() {
         if (Input.GetMouseButtonDown(0)) {
             if (!getHit()) return;
@@ -179,6 +183,8 @@ public class Controller : MonoBehaviour {
                 rotateKeyOperation(current);
             } else if (current.name == "lockHandle") {
                 lockHandleOperation(current);
+            } else if (current.name == "pusher") {
+                pusherOperation(current);
             } 
         } else 
             return;

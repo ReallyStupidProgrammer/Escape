@@ -1976,6 +1976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: 0
+  amount: 90
   reverse: 0
   leftRight: 1
   mouseXY: 0
@@ -2409,6 +2410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: 90
+  amount: 90
   reverse: 0
   leftRight: 1
   mouseXY: 1
@@ -3128,6 +3130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: 135
+  amount: 90
   reverse: 0
   leftRight: 1
   mouseXY: 1
@@ -3491,6 +3494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: 0
+  amount: 90
   reverse: 0
   leftRight: 0
   mouseXY: 1
@@ -5259,6 +5263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: 360
+  amount: 90
   reverse: 1
   leftRight: 0
   mouseXY: 1
@@ -6086,6 +6091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: 0
+  amount: 90
   reverse: 0
   leftRight: 1
   mouseXY: 0
@@ -6992,6 +6998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: 0
+  amount: 90
   reverse: 1
   leftRight: 0
   mouseXY: 1
@@ -7889,6 +7896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: 0
+  amount: 90
   reverse: 1
   leftRight: 1
   mouseXY: 1
@@ -12946,6 +12954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: 0
+  amount: 90
   reverse: 1
   leftRight: 1
   mouseXY: 1
@@ -13599,6 +13608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: 270
+  amount: 90
   reverse: 1
   leftRight: 0
   mouseXY: 1
@@ -14360,6 +14370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: 0
+  amount: 90
   reverse: 1
   leftRight: 0
   mouseXY: 1
@@ -17024,6 +17035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: 270
+  amount: 90
   reverse: 0
   leftRight: 1
   mouseXY: 1
@@ -17307,6 +17319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: 0
+  amount: 90
   reverse: 0
   leftRight: 1
   mouseXY: 1
@@ -19654,6 +19667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: 0
+  amount: 90
   reverse: 0
   leftRight: 0
   mouseXY: 1
@@ -21951,6 +21965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: 135
+  amount: 90
   reverse: 0
   leftRight: 1
   mouseXY: 1
@@ -22317,6 +22332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: 0
+  amount: 90
   reverse: 0
   leftRight: 1
   mouseXY: 1
@@ -26195,6 +26211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: 270
+  amount: 90
   reverse: 0
   leftRight: 1
   mouseXY: 1
@@ -28402,6 +28419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: -135
+  amount: 90
   reverse: 0
   leftRight: 1
   mouseXY: 1
@@ -28929,6 +28947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: 0
+  amount: 90
   reverse: 1
   leftRight: 0
   mouseXY: 1
@@ -32779,6 +32798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: 0
+  amount: 90
   reverse: 1
   leftRight: 1
   mouseXY: 1
@@ -32843,13 +32863,57 @@ GameObject:
   - component: {fileID: 6645823805270573173}
   - component: {fileID: 5366159435746091521}
   - component: {fileID: 7202271455111441563}
+  - component: {fileID: 3655000509958378567}
+  - component: {fileID: 3655000509958378566}
+  - component: {fileID: 3655000509958378565}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: pusher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3655000509958378565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3655000509958378564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ed87152714620e45a930b2f04045fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minAngle: -60
+  maxAngle: 60
+  speed: -30
+--- !u!65 &3655000509958378566
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3655000509958378564}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0763211, y: 0.8106426, z: 6.6619606}
+  m_Center: {x: -0.038157985, y: 0.018112589, z: 2.3309956}
+--- !u!65 &3655000509958378567
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3655000509958378564}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 2.0763211, y: 4.700001, z: 1.8772442}
+  m_Center: {x: -0.03815606, y: -0.0000058910014, z: 4.723356}
 --- !u!1001 &3724242406442054822
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35615,13 +35679,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3655000509958378564}
-  m_LocalRotation: {x: 0.6830127, y: -0.18301271, z: -0.18301271, w: 0.68301266}
-  m_LocalPosition: {x: -0.35999998, y: 0.06, z: -0.66999996}
-  m_LocalScale: {x: 0.1, y: 0.2, z: 0.1}
+  m_LocalRotation: {x: 0.6830127, y: -0.18301271, z: -0.18301266, w: 0.6830127}
+  m_LocalPosition: {x: -0.36000147, y: 0.06000012, z: -0.6700002}
+  m_LocalScale: {x: 0.100000046, y: 0.2, z: 0.10000002}
   m_Children: []
   m_Father: {fileID: 543450652735880623}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 60, y: -90, z: -90}
 --- !u!4 &6679768712269820799
 Transform:
   m_ObjectHideFlags: 0
@@ -36155,7 +36219,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155298510802323625}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: -1, y: -1.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -36167,7 +36231,7 @@ Transform:
   - {fileID: 1507253931}
   m_Father: {fileID: 543450652735880623}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!4 &7284334866125515213
 Transform:
   m_ObjectHideFlags: 0
