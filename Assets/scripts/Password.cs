@@ -10,7 +10,7 @@ public class Password : MonoBehaviour {
     public int[] password;
     public GameObject dependentObject = null;
     private bool whetherCorrect = false;
-    private GameObject item;
+    public GameObject unlockItem = null;
 
     public void add() {
         if (dependentObject != null && dependentObject.tag == "NoPower") return;
@@ -18,8 +18,8 @@ public class Password : MonoBehaviour {
         int num = int.Parse(pwd.text);
         num = (num + 1) % 10;
         pwd.text = num.ToString();
-        item = gameObject.transform.parent.parent.gameObject;
-        item.GetComponent<Password>().updatePassword(index, num);
+        if (unlockItem == null) unlockItem = gameObject.transform.parent.parent.gameObject;
+        unlockItem.GetComponent<Password>().updatePassword(index, num);
     }
 
     private bool checkPwd() {

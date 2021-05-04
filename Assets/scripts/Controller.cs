@@ -155,6 +155,10 @@ public class Controller : MonoBehaviour {
         ball.GetComponent<Ball>().operation();
     }
 
+    private void lockHandleOperation(GameObject lockHandle) {
+        lockHandle.GetComponent<WallControlBox>().open();
+    }
+
     private void Update() {
         if (Input.GetMouseButtonDown(0)) {
             if (!getHit()) return;
@@ -173,7 +177,9 @@ public class Controller : MonoBehaviour {
                 handleOperation(current);
             } else if (current.tag == "pluged") {
                 rotateKeyOperation(current);
-            }
+            } else if (current.name == "lockHandle") {
+                lockHandleOperation(current);
+            } 
         } else 
             return;
         if (Input.GetMouseButtonUp(0)) {
