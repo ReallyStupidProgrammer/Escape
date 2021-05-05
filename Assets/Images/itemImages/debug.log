@@ -24,3 +24,10 @@
 [0430/213801:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
 [0430/213803:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
 [0430/233903:WARNING:dns_config_service_win.cc(674)] Failed to read DnsConfig.
+[0505/221758:INFO:http_cache_transaction.cc(72)] IgnoreZeroCacheError: 0
+[0505/222714:WARNING:webmediaplayer_impl.cc(341)] Using MultibufferDataSource
+[0505/222722:ERROR:ffmpeg_demuxer.cc(1510)] media::FFmpegDemuxer::OnReadFrameDone result=-541478725 IsMaxMemoryUsageReached=0
+[0505/222730:ERROR:ffmpeg_demuxer.cc(1510)] media::FFmpegDemuxer::OnReadFrameDone result=-541478725 IsMaxMemoryUsageReached=0
+[0505/222732:WARNING:webmediaplayer_impl.cc(341)] Using MultibufferDataSource
+[0505/222752:ERROR:ffmpeg_demuxer.cc(1510)] media::FFmpegDemuxer::OnReadFrameDone result=-541478725 IsMaxMemoryUsageReached=0
+[0505/222816:WARNING:webmediaplayer_impl.cc(341)] Using MultibufferDataSource
