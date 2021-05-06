@@ -12,4 +12,8 @@ public class End : MonoBehaviour {
             endLight.SetActive(true);
         }
     }
+
+    private void OnTriggerEnter(Collider other) {
+        
+    }
 }
