@@ -14,6 +14,6 @@ public class End : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider other) {
-        
+        gameObject.GetComponent<Scene>().success();
     }
 }
