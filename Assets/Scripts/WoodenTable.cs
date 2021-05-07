@@ -11,23 +11,24 @@ public class WoodenTable : MonoBehaviour {
     public float maxPlatformAmount = 0;
     private bool opened = false;
     private IEnumerator coroutine;
-    private float doorSpeed = 0.0005f;
-    private float platformSpeed = 0.0002f;
+    private float doorSpeed = 0.5f;
+    private float platformSpeed = 0.2f;
     private float leftDoorAmount = 0;
     private float platformAmount = 0;
 
     private IEnumerator move() {
         while (true) {
             bool flag = true;
-            if (leftDoorAmount + doorSpeed < maxDoorAmount) {
-                slideLeftDoor.transform.Translate(0, 0, doorSpeed, Space.Self);
-                slideRightDoor.transform.Translate(0, 0, -doorSpeed, Space.Self);
-                leftDoorAmount += doorSpeed;
+            print(leftDoorAmount + doorSpeed * Time.deltaTime);
+            if (leftDoorAmount + doorSpeed * Time.deltaTime < maxDoorAmount) {
+                slideLeftDoor.transform.Translate(0, 0, doorSpeed * Time.deltaTime, Space.Self);
+                slideRightDoor.transform.Translate(0, 0, -doorSpeed * Time.deltaTime, Space.Self);
+                leftDoorAmount += doorSpeed * Time.deltaTime;
                 flag = false;
             }        
-            if (platformAmount + platformSpeed < maxPlatformAmount) {
-                platform.transform.Translate(0, platformSpeed, 0, Space.Self);
-                platformAmount += platformSpeed;
+            if (platformAmount + platformSpeed * Time.deltaTime < maxPlatformAmount) {
+                platform.transform.Translate(0, platformSpeed * Time.deltaTime, 0, Space.Self);
+                platformAmount += platformSpeed * Time.deltaTime;
                 flag = false;
             }
             if (flag) break;

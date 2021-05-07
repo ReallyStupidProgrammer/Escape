@@ -6,13 +6,13 @@ public class WallControlBoxDoor : MonoBehaviour {
 
     private IEnumerator coroutine;
     private float currentAngle = 0;
-    private float speed = 0.03f;
+    private float speed = 10f;
     private float maxAngle = 180;
 
     private IEnumerator rotate() {
         while (currentAngle < maxAngle) {
-            gameObject.transform.Rotate(0, 0, speed, Space.Self);
-            currentAngle += speed;
+            gameObject.transform.Rotate(0, 0, speed * Time.deltaTime, Space.Self);
+            currentAngle += speed * Time.deltaTime;
             yield return null;
         }
         StopCoroutine(coroutine);

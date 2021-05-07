@@ -12,15 +12,15 @@ public class PianoKey : MonoBehaviour {
     
     private IEnumerator coroutine;
     private float maxAngle = 5;
-    private float speed = 0.1f;
+    private float speed = 100f;
     private float upDown = -1;
     private float currentAngle = 0;
     private bool moving = false;
 
     private IEnumerator keyDown() {
         while (true) {
-            gameObject.transform.Rotate(speed * upDown, 0, 0, Space.Self);
-            currentAngle -= speed * upDown;
+            gameObject.transform.Rotate(speed * upDown * Time.deltaTime, 0, 0, Space.Self);
+            currentAngle -= speed * upDown * Time.deltaTime;
             if (upDown == -1 && currentAngle >= maxAngle) {
                 upDown = 1;
             }

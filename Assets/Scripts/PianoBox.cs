@@ -8,12 +8,12 @@ public class PianoBox : MonoBehaviour {
     private IEnumerator coroutine;
     private float currentPos = 0;
     private float maxPos = -0.3f;
-    private float speed = -0.001f;
+    private float speed = -0.1f;
 
     private IEnumerator openBox() {
         while (true) {
-            gameObject.transform.Translate(speed, 0, 0, Space.Self);
-            currentPos += speed;
+            gameObject.transform.Translate(speed * Time.deltaTime, 0, 0, Space.Self);
+            currentPos += speed * Time.deltaTime;
             if (currentPos <= maxPos) break;
             yield return null;
         }
@@ -22,7 +22,6 @@ public class PianoBox : MonoBehaviour {
 
     private void open() {
         opened = true;
-        print("Test");
         coroutine = openBox();
         StartCoroutine(coroutine);
     }
