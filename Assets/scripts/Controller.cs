@@ -16,6 +16,7 @@ public class Controller : MonoBehaviour {
         Ball.ballColor.Add("purpleBall", purple);
         Ball.ballColor.Add("cyanBall", Color.cyan);
         Ball.ballColor.Add("blueBall", Color.blue);
+        Application.targetFrameRate = -1;
     }
 
     bool getHit() {
