@@ -8011,6 +8011,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.002019211, y: 0.019999998, z: 0.8399998}
   m_Center: {x: -0.008990476, y: 0.0000000053872533, z: 0.41000003}
+--- !u!114 &448796690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448796686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ecbf6a4213c6146a4ca53d851c8033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CD: {fileID: 0}
+  nails: 6
+  CDPipe: 0
+  pipeDestroyed: 0
 --- !u!1 &448929281
 GameObject:
   m_ObjectHideFlags: 0
@@ -13427,6 +13443,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.002241068, y: 0.019999998, z: 0.8399999}
   m_Center: {x: -0.0088795675, y: 0.0000000057472422, z: 0.40999985}
+--- !u!114 &878670088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878670084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ecbf6a4213c6146a4ca53d851c8033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CD: {fileID: 0}
+  nails: 6
+  CDPipe: 0
+  pipeDestroyed: 0
 --- !u!1001 &881634271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18782,6 +18814,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.002019211, y: 0.019999998, z: 0.8399998}
   m_Center: {x: -0.008990476, y: 0.0000000053872533, z: 0.41000003}
+--- !u!114 &1260688740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260688736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ecbf6a4213c6146a4ca53d851c8033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CD: {fileID: 0}
+  nails: 6
+  CDPipe: 0
+  pipeDestroyed: 0
 --- !u!1001 &1269780984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23045,6 +23093,7 @@ MonoBehaviour:
   CD: {fileID: 0}
   nails: 6
   CDPipe: 0
+  pipeDestroyed: 0
 --- !u!114 &1617264711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24805,6 +24854,7 @@ MonoBehaviour:
   CD: {fileID: 2813991334383625479, guid: 1469443f06b3e1f4daed6ba3410d7ae7, type: 3}
   nails: 6
   CDPipe: 1
+  pipeDestroyed: 0
 --- !u!65 &1744772979
 BoxCollider:
   m_ObjectHideFlags: 0

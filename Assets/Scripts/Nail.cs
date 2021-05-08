@@ -10,6 +10,10 @@ public class Nail : MonoBehaviour {
     public void removeNail() {
         if (Item.selectedItemName == "screwdriver") {
             pipe.GetComponent<Pipe>().nails -= 1;
+            if (pipe.GetComponent<Pipe>().nails == 0) {
+                ItemGUI.updateItemList(Item.selectedItemIndex);
+                ItemGUI.resetSelected();
+            }
             Destroy(gameObject);
         }
 

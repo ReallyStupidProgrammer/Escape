@@ -8,12 +8,10 @@ public class Controller : MonoBehaviour {
     public static Color messageColor;
     private RaycastHit hit;
     private GameObject current;
-    private bool pipeDestroyed;
 
     private void Start() {
         message = "";
         messageColor = Color.clear;
-        pipeDestroyed = false;
     }
 
     bool getHit() {
@@ -126,15 +124,15 @@ public class Controller : MonoBehaviour {
 
     private void pipeOperation(GameObject pipe) {
         if ((pipe.GetComponent<Pipe>().CDPipe 
-          && Item.selectedItemName == "CD")
-          && pipeDestroyed) {
+        && Item.selectedItemName == "CD")
+        && pipe.GetComponent<Pipe>().pipeDestroyed) {
             pipe.GetComponent<Pipe>().putCD();
             ItemGUI.updateItemList(Item.selectedItemIndex);
             ItemGUI.resetSelected();
         } else {
             pipe.GetComponent<Pipe>().removePipe();
-            pipeDestroyed = true;
         }
+
     }
 
     private void nailOperation(GameObject nail) {

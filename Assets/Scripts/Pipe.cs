@@ -8,6 +8,7 @@ public class Pipe : MonoBehaviour {
     public int nails = 6;
 
     public bool CDPipe = false;
+    public bool pipeDestroyed;
 
     private bool flag = false;
 
@@ -20,6 +21,9 @@ public class Pipe : MonoBehaviour {
     }
 
     public void removePipe() {
-        if (nails == 0) Destroy(gameObject);
+        if (nails == 0) {
+            Destroy(gameObject);
+            pipeDestroyed = true;
+        }
     }
 }
