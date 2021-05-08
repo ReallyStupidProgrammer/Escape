@@ -12,10 +12,14 @@ public class Controller : MonoBehaviour {
     private bool pipeDestroyed = false;
 
     private void Start() {
-        Ball.ballColor.Add("yellowBall", Color.yellow);
-        Ball.ballColor.Add("purpleBall", purple);
-        Ball.ballColor.Add("cyanBall", Color.cyan);
-        Ball.ballColor.Add("blueBall", Color.blue);
+        try{
+            Ball.ballColor.Add("yellowBall", Color.yellow);
+            Ball.ballColor.Add("purpleBall", purple);
+            Ball.ballColor.Add("cyanBall", Color.cyan);
+            Ball.ballColor.Add("blueBall", Color.blue);
+        } catch (System.ArgumentException) {
+            ;
+        }
     }
 
     bool getHit() {
