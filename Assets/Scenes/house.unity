@@ -1871,6 +1871,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -49718667752582685, guid: 5e941eba956023047a57b930b595bad4, type: 3}
+      propertyPath: m_TagString
+      value: locked
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5e941eba956023047a57b930b595bad4, type: 3}
       propertyPath: m_Name
       value: suitecase
@@ -26745,6 +26749,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -49718667752582685, guid: 5e941eba956023047a57b930b595bad4, type: 3}
+      propertyPath: m_TagString
+      value: locked
+      objectReference: {fileID: 0}
+    - target: {fileID: -49718667752582685, guid: 5e941eba956023047a57b930b595bad4, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -26791,6 +26799,10 @@ PrefabInstance:
     - target: {fileID: 7630162198099333388, guid: 5e941eba956023047a57b930b595bad4, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8023732133745872319, guid: 5e941eba956023047a57b930b595bad4, type: 3}
+      propertyPath: m_TagString
+      value: locked
       objectReference: {fileID: 0}
     - target: {fileID: 8023732133745872319, guid: 5e941eba956023047a57b930b595bad4, type: 3}
       propertyPath: m_StaticEditorFlags

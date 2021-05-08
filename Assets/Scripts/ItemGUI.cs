@@ -21,7 +21,6 @@ public class ItemGUI : MonoBehaviour {
             temp.GetComponent<ItemOnList>().index = i;
             itemList.Add(temp);
         }
-        print(itemList[0]);
     }
 
     public static void updateItemList(int index) {
