@@ -11,7 +11,7 @@ public class CharacterRotate : MonoBehaviour {
             float mouseY = Input.GetAxis("Mouse Y") * 2;
             float current = transform.localEulerAngles.x;
             if (current > 300) current -= 360;
-            if (current - mouseY < -30 || current - mouseY > 30) return;
+            if (current - mouseY < -45 || current - mouseY > 60) return;
             transform.Rotate(-mouseY, 0, 0, Space.Self);
         }
         else {

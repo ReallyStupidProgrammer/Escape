@@ -23,7 +23,7 @@ public class Password : MonoBehaviour {
     }
 
     private bool checkPwd() {
-        for (int i = 0; i < 3; i ++) {
+        for (int i = 0; i < correct.Length; i ++) {
             if (password[i] != correct[i]) return false;
         }
         return true;

@@ -19,7 +19,6 @@ public class WoodenTable : MonoBehaviour {
     private IEnumerator move() {
         while (true) {
             bool flag = true;
-            print(leftDoorAmount + doorSpeed * Time.deltaTime);
             if (leftDoorAmount + doorSpeed * Time.deltaTime < maxDoorAmount) {
                 slideLeftDoor.transform.Translate(0, 0, doorSpeed * Time.deltaTime, Space.Self);
                 slideRightDoor.transform.Translate(0, 0, -doorSpeed * Time.deltaTime, Space.Self);
