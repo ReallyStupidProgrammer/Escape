@@ -4,7 +4,21 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour {
 
-    public static Dictionary<string, Color> ballColor = new Dictionary<string, Color>();
+    public static Dictionary<string, Color> ballColor;
+    public static Color purple;
+
+    private void Start() {
+        ballColor = new Dictionary<string, Color>();
+        purple = new Color32(101, 0, 255, 255);
+        try{
+            Ball.ballColor.Add("yellowBall", Color.yellow);
+            Ball.ballColor.Add("purpleBall", purple);
+            Ball.ballColor.Add("cyanBall", Color.cyan);
+            Ball.ballColor.Add("blueBall", Color.blue);
+        } catch (System.ArgumentException) {
+            ;
+        }
+    }
 
     private void put() {
         GameObject currentObject = ItemGUI.itemList[Item.selectedItemIndex];

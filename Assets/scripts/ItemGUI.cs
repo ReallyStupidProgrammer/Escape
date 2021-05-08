@@ -5,10 +5,12 @@ using UnityEngine;
 public class ItemGUI : MonoBehaviour {
 
     public GameObject buttonPrefab;
-    public static int lastItemIndex = 0;
-    public static List<GameObject> itemList = new List<GameObject>();
+    public static int lastItemIndex;
+    public static List<GameObject> itemList;
 
     private void Start() {
+        lastItemIndex = 0;
+        itemList = new List<GameObject>();
         for (int i = 0; i < 10; i ++) {
             GameObject temp = Instantiate(buttonPrefab,
                                           gameObject.transform,
@@ -19,6 +21,7 @@ public class ItemGUI : MonoBehaviour {
             temp.GetComponent<ItemOnList>().index = i;
             itemList.Add(temp);
         }
+        print(itemList[0]);
     }
 
     public static void updateItemList(int index) {

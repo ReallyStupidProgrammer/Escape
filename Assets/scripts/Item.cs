@@ -27,7 +27,7 @@ public class Item : MonoBehaviour {
         Item.changeLayer(gameObject, 8);      
         collected = true;
         if (!keepCollider) {
-            Destroy(gameObject.GetComponent<BoxCollider>());
+            gameObject.GetComponent<Collider>().enabled = false;
         } 
     }
 }
