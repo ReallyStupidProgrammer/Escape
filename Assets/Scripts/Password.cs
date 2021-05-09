@@ -23,7 +23,9 @@ public class Password : MonoBehaviour {
     }
 
     private void imageAdd() {
-        gameObject.GetComponent<PasswordImage>().Add();
+        int num = gameObject.GetComponent<PasswordImage>().Add();
+        if (unlockItem == null) unlockItem = gameObject.transform.parent.parent.gameObject;
+        unlockItem.GetComponent<Password>().updatePassword(index, num);
     }
 
     public void add() {
