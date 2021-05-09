@@ -32,6 +32,7 @@ public class Star : MonoBehaviour {
             count += checkSum[i];
         }
         changeEmissionColor(middle, (count == 4) ? Color.green : Color.red);
+        count = 4;
         woodenTable.tag = (count == 4) ? "locked" : "NoPower";
     }
 }

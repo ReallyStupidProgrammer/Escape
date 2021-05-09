@@ -9,17 +9,27 @@ public class Password : MonoBehaviour {
     public int[] correct;
     public int[] password;
     public GameObject dependentObject = null;
-    private bool whetherCorrect = false;
     public GameObject unlockItem = null;
+    public bool whetherText = true;
+    private bool whetherCorrect = false;
 
-    public void add() {
-        if (dependentObject != null && dependentObject.tag == "NoPower") return;
+    private void textAdd() {
         Text pwd = gameObject.GetComponent<Text>();
         int num = int.Parse(pwd.text);
         num = (num + 1) % 10;
         pwd.text = num.ToString();
         if (unlockItem == null) unlockItem = gameObject.transform.parent.parent.gameObject;
         unlockItem.GetComponent<Password>().updatePassword(index, num);
+    }
+
+    private void imageAdd() {
+        gameObject.GetComponent<PasswordImage>().Add();
+    }
+
+    public void add() {
+        if (dependentObject != null && dependentObject.tag == "NoPower") return;
+        if (whetherText) textAdd();
+        else imageAdd();
     }
 
     private bool checkPwd() {
