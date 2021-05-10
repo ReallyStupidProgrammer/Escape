@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Pipe : MonoBehaviour {
 
+    public static bool pipeDestroyed;
     public GameObject CD;
     public int nails = 6;
 
     public bool CDPipe = false;
-    public bool pipeDestroyed;
 
     private bool flag = false;
 

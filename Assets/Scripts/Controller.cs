@@ -125,7 +125,7 @@ public class Controller : MonoBehaviour {
     private void pipeOperation(GameObject pipe) {
         if ((pipe.GetComponent<Pipe>().CDPipe 
         && Item.selectedItemName == "CD")
-        && !pipe.GetComponent<Pipe>().pipeDestroyed) {
+        && Pipe.pipeDestroyed) {
             pipe.GetComponent<Pipe>().putCD();
             ItemGUI.updateItemList(Item.selectedItemIndex);
             ItemGUI.resetSelected();
