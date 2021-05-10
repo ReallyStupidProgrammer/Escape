@@ -16,6 +16,6 @@ Then you can play the game!
 
 ## Acknowledgement
 I sincerely thank for and provide my respect to
-- Spinach for technical support on Unity
-- Cyan for art support
-- All my friends who help me test the game. 
+- Spinach who provided technical support on Unity
+- Cyan who provided art support
+- All my friends who helped me test the game. 
