@@ -40,10 +40,10 @@ public class Water : MonoBehaviour {
         } else {
             float currentPosition = gameObject.transform.localPosition.y;
             if (upDown > 0 && currentPosition < upPosition) {
-                gameObject.transform.Translate(0, upDown * speed, 0, Space.World);
+                gameObject.transform.Translate(0, upDown * speed * Time.deltaTime, 0, Space.World);
             }
             if (upDown < 0 && currentPosition > downPosition) {
-                gameObject.transform.Translate(0, upDown * speed, 0, Space.World);
+                gameObject.transform.Translate(0, upDown * speed * Time.deltaTime, 0, Space.World);
             }
         }
     }

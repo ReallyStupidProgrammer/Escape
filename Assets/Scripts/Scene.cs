@@ -16,8 +16,17 @@ public class Scene : MonoBehaviour {
         SceneManager.LoadSceneAsync(2);
     }
 
+    public void settings() {
+        SceneManager.LoadSceneAsync(3);
+    }
+
+    public void help() {
+        SceneManager.LoadSceneAsync(4);
+    }
+
     public void quit() {
         // UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
+
 }
