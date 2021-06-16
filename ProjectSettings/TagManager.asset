@@ -15,6 +15,7 @@ TagManager:
   - item
   - pluged
   - ball
+  - bgm
   layers:
   - Default
   - TransparentFX
