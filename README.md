@@ -11,5 +11,11 @@ This is my First Unity 3D Game and also my first time to use Blender to build mo
 An escape room
 
 ## Release
-Go to the [release page](https://github.com/ReallyStupidProgrammer/Escape/releases) and download the latest version.
-Then you can run the game!
+Go to the [release page](https://github.com/ReallyStupidProgrammer/Escape/releases) and download the latest version. \\
+Then you can play the game!
+
+## Acknowledgement
+I sincerely thank for and provide my respect to
+- Spinach who provided technical support on Unity
+- Cyan who provided art support
+- All my friends who helped me test the game. 
