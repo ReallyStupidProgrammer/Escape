@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ca213e64e419fd4682ec6f5c5685145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: {fileID: 8300000, guid: 59995c397d4b90743a477b186dc68c28, type: 3}
+  bgm: {fileID: 8300000, guid: 59995c397d4b90743a477b186dc68c28, type: 3}
+  victory: {fileID: 8300000, guid: d08cda1bbd62a1648b151efd9fdb971b, type: 3}
 --- !u!82 &2098841358348245750
 AudioSource:
   m_ObjectHideFlags: 0

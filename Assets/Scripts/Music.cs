@@ -5,14 +5,13 @@ using UnityEngine;
 public class Music : MonoBehaviour {
 
     public static float volume = 1;
-    public AudioClip music;
+    public AudioClip bgm;
+    public AudioClip victory;
     private AudioSource back;
 
-    private void Start() {
+    public void initialize() {
         back = this.GetComponent<AudioSource>();
-        back.clip = music;
         back.volume = 1;
-        back.Play();
         DontDestroyOnLoad(this.gameObject); 
     }
 
@@ -20,4 +19,17 @@ public class Music : MonoBehaviour {
         back.volume = volume;
     }
 
+    public void toBgm() {
+        if (back.clip != bgm) {
+            back.clip = bgm;
+            back.Play();
+        }
+    }
+
+    public void toVictory() {
+        if (back.clip != victory) {
+            back.clip = victory;
+            back.Play();
+        }
+    }
 }
