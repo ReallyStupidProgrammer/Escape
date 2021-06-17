@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f87e1765a61e0449b8e2efa5998bfd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: "\u7D2B\u8272\u5C0F\u7403"
+  objectName: itemPurpleBall
   picture: {fileID: 21300000, guid: 52720a20ed2d48442acaa96d396ecc7f, type: 3}
   collected: 0
   keepCollider: 0

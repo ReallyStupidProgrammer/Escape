@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f87e1765a61e0449b8e2efa5998bfd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: "\u87BA\u4E1D\u5200"
+  objectName: itemScrewdriver
   picture: {fileID: 0}
   collected: 0
   keepCollider: 0

@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   relatedObject: {fileID: 0}
-  objectName: "CD\u76D2\u5B50"
+  objectName: itemCD
   picture: {fileID: 21300000, guid: 7b5ee56d6a59d174faa4e7ea4e324100, type: 3}
 --- !u!1 &3026766577032451136
 GameObject:
@@ -253,9 +253,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origin: 360
+  amount: 90
   reverse: 1
   leftRight: 0
   mouseXY: 1
   relatedKey: {fileID: 0}
   speed: 10
   xyz: 0
+  world: 1

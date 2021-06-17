@@ -29,10 +29,10 @@ public class Controller : MonoBehaviour {
                 keyName = key.name;
             }
             if (Item.selectedItemName != keyName) {
-                message = "未解锁";
+                message = Language.language["locked"].str;
                 messageColor = Color.red;
             } else {
-                message = "已开锁";
+                message = Language.language["unlocked"].str;
                 messageColor = Color.green;
                 door.tag = "unlocked";
                 ItemGUI.updateItemList(Item.selectedItemIndex);
@@ -47,7 +47,7 @@ public class Controller : MonoBehaviour {
         if (drawer.tag == "unlocked") {
             drawer.GetComponent<Movement>().move();
         } else {
-            message = "未解锁";
+            message = Language.language["locked"].str;
             messageColor = Color.red;
         }
     }
@@ -58,7 +58,7 @@ public class Controller : MonoBehaviour {
 
     private void computerOperation(GameObject computer) {
         if (computer.tag == "NoPower") {
-            message = "未通电";
+            message = Language.language["nopower"].str;
             messageColor = Color.red;
         }
     }
@@ -78,21 +78,22 @@ public class Controller : MonoBehaviour {
     private void itemOperation(GameObject item) {
         if (item.GetComponent<Item>().collected) return;
         item.GetComponent<Item>().collect();
-        message = "获得道具：" + item.GetComponent<Item>().objectName;
+        message = Language.language["getItem"].str + "\n" 
+                + Language.language[item.GetComponent<Item>().objectName].str;
         messageColor = Color.green;
     }
     
     private void coverOperation(GameObject cover) {
         if (cover.tag == "unlocked") cover.GetComponent<Cover>().open();
         else {
-            message = "未解锁";
+            message = Language.language["locked"].str;
             messageColor = Color.red;
         }
     }
 
     private void screenOperation(GameObject screen) {
         if (screen.transform.parent.gameObject.tag == "NoPower") {
-            message = "未通电";
+            message = Language.language["nopower"].str;
             messageColor = Color.red;
         }
         if (Item.selectedItemName == screen.GetComponent<Screen>().relatedItem.name) {
@@ -104,7 +105,7 @@ public class Controller : MonoBehaviour {
 
     private void woodBlankOperation(GameObject woodBlank) {
         if (!Machine.machinePower) {
-            message = "未通电";
+            message = Language.language["nopower"].str;
             messageColor = Color.red;
             return;
         }
@@ -195,7 +196,7 @@ public class Controller : MonoBehaviour {
                 screenOperation(current);
             } else if (current.name.IndexOf("machine") >= 0) {
                 if (!Machine.machinePower) {
-                    message = "未通电";
+                    message = Language.language["nopower"].str;
                     messageColor = Color.red;
                 }   
             } else if (current.name == "blackWater") {

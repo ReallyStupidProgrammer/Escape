@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f87e1765a61e0449b8e2efa5998bfd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: "\u7EA2\u8272\u94A5\u5319"
+  objectName: itemRedKey
   picture: {fileID: 21300000, guid: 89680a254e0abec4098fbd374dab6daa, type: 3}
-  relatedObject: {fileID: 0}
+  collected: 0
+  keepCollider: 0

@@ -26,7 +26,7 @@ public class Transmit : MonoBehaviour
     }
 
     public void transmit() {
-        Controller.message = "前往" + message;
+        Controller.message = Language.language["goto"].str + Language.language[message].str;
         Controller.messageColor = Color.green;
         player.transform.position = new Vector3(player.transform.position.x, 
                                                 player.transform.position.y + upDown * 26, 
@@ -47,7 +47,9 @@ public class Transmit : MonoBehaviour
             }
             flag = true;
             notification.SetActive(true);
-            notification.GetComponentInChildren<Text>().text = "是否前往" + message;
+            notification.GetComponentInChildren<Text>().text = Language.language["if"].str 
+                                                             + Language.language[message].str
+                                                             + "?";
             yesButton.GetComponent<Notification>().transmittion = gameObject;
         } else if (flag) {
             flag = false;

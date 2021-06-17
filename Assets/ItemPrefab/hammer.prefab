@@ -236,8 +236,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f87e1765a61e0449b8e2efa5998bfd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: "\u9524\u5B50"
+  objectName: itemHammer
   picture: {fileID: 21300000, guid: 28b06d2795449ba49ada14dcc77f25d4, type: 3}
+  collected: 0
+  keepCollider: 0
 --- !u!1 &8407887136815751594
 GameObject:
   m_ObjectHideFlags: 0

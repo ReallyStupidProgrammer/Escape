@@ -12,7 +12,7 @@ public class ItemOnListText : MonoBehaviour {
     }
 
     private void Update() {
-        string objectName = parentObject.GetComponent<ItemOnList>().objectName;
-        gameObject.GetComponent<Text>().text = objectName;
+        string objectKey = parentObject.GetComponent<ItemOnList>().objectName;
+        gameObject.GetComponent<Text>().text = Language.language[objectKey].str;
     }
 }

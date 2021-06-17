@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f87e1765a61e0449b8e2efa5998bfd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: "\u9752\u8272\u5C0F\u7403"
+  objectName: itemCyanBall
   picture: {fileID: 21300000, guid: 6265ed262d816ad4faebc036b509532e, type: 3}
   collected: 0
   keepCollider: 0

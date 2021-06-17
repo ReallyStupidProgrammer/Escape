@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f87e1765a61e0449b8e2efa5998bfd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: "\u9EC4\u8272\u94A5\u5319"
+  objectName: itemYellowKey
   picture: {fileID: 21300000, guid: 0955e2a49e9812748bc26494233f79ca, type: 3}
   collected: 0
   keepCollider: 0

@@ -4404,7 +4404,7 @@ PrefabInstance:
       objectReference: {fileID: 1854322190}
     - target: {fileID: 5774868537724840178, guid: fb616d2fc0c5909479d5f5628ce32a56, type: 3}
       propertyPath: message
-      value: "\u5730\u4E0B\u5BA4"
+      value: basement
       objectReference: {fileID: 0}
     - target: {fileID: 5774868537724840178, guid: fb616d2fc0c5909479d5f5628ce32a56, type: 3}
       propertyPath: yesButton
@@ -4488,8 +4488,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.06455858, y: 2.5489218, z: 2.9585886}
-  m_Center: {x: -0.96772075, y: 0.2744587, z: 0.54040825}
+  m_Size: {x: 0.06455858, y: 2.0046954, z: 2.9585886}
+  m_Center: {x: -0.96772075, y: 0.0023459725, z: 0.54040825}
 --- !u!65 &257948953
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4501,8 +4501,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.141346, y: 2.5351012, z: 0.06725092}
-  m_Center: {x: 0.64056313, y: 0.2675471, z: -0.9663746}
+  m_Size: {x: 3.141346, y: 1.9648794, z: 0.06725092}
+  m_Center: {x: 0.64056313, y: -0.017563004, z: -0.9663746}
 --- !u!1 &258848944
 GameObject:
   m_ObjectHideFlags: 0
@@ -4902,7 +4902,7 @@ PrefabInstance:
       objectReference: {fileID: 1854322190}
     - target: {fileID: 5774868537724840178, guid: fb616d2fc0c5909479d5f5628ce32a56, type: 3}
       propertyPath: message
-      value: "\u4E00\u5C42"
+      value: floor1
       objectReference: {fileID: 0}
     - target: {fileID: 5774868537724840178, guid: fb616d2fc0c5909479d5f5628ce32a56, type: 3}
       propertyPath: yesButton
@@ -10461,8 +10461,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 12.292839, z: 2}
-  m_Center: {x: -1, y: 5.1464195, z: -0.0000018822519}
+  m_Size: {x: 2.114582, y: 12.92824, z: 2}
+  m_Center: {x: -1.057291, y: 5.46412, z: -0.0000018822519}
 --- !u!4 &635007514 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3407316343158922041, guid: 354adae3830879e41beab63602f93af5, type: 3}
@@ -13944,7 +13944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5774868537724840178, guid: fb616d2fc0c5909479d5f5628ce32a56, type: 3}
       propertyPath: message
-      value: "\u4E8C\u5C42"
+      value: floor2
       objectReference: {fileID: 0}
     - target: {fileID: 5774868537724840178, guid: fb616d2fc0c5909479d5f5628ce32a56, type: 3}
       propertyPath: yesButton
@@ -20015,7 +20015,7 @@ PrefabInstance:
       objectReference: {fileID: 1854322190}
     - target: {fileID: 5774868537724840178, guid: fb616d2fc0c5909479d5f5628ce32a56, type: 3}
       propertyPath: message
-      value: "\u4E00\u5C42"
+      value: floor1
       objectReference: {fileID: 0}
     - target: {fileID: 5774868537724840178, guid: fb616d2fc0c5909479d5f5628ce32a56, type: 3}
       propertyPath: yesButton
@@ -20680,7 +20680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   relatedObject: {fileID: 798315502}
-  objectName: "CD\u76D2\u5B50"
+  objectName: itemCD
   picture: {fileID: 21300000, guid: 7b5ee56d6a59d174faa4e7ea4e324100, type: 3}
 --- !u!1 &1360852972
 GameObject:
@@ -27002,6 +27002,7 @@ GameObject:
   - component: {fileID: 1817570651}
   - component: {fileID: 1817570653}
   - component: {fileID: 1817570652}
+  - component: {fileID: 1817570654}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -27049,11 +27050,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: c37f81f93528c4e059a9102ca60f957f, type: 3}
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -27070,6 +27071,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1817570650}
   m_CullTransparentMesh: 0
+--- !u!114 &1817570654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817570650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9688480d104042459ae6ddd43282cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: menu
 --- !u!1 &1818011292
 GameObject:
   m_ObjectHideFlags: 0
@@ -27980,6 +27994,7 @@ GameObject:
   - component: {fileID: 1894304376}
   - component: {fileID: 1894304378}
   - component: {fileID: 1894304377}
+  - component: {fileID: 1894304379}
   m_Layer: 5
   m_Name: ItemsText
   m_TagString: Untagged
@@ -28019,7 +28034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9577252, g: 0.96185154, b: 0.9622642, a: 1}
+  m_Color: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -28027,12 +28042,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 0f5ff0a744f7ab34a993c8708d90dba7, type: 3}
-    m_FontSize: 50
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 50
+    m_MaxSize: 90
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -28048,6 +28063,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1894304375}
   m_CullTransparentMesh: 0
+--- !u!114 &1894304379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894304375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9688480d104042459ae6ddd43282cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: items
 --- !u!1 &1906822165
 GameObject:
   m_ObjectHideFlags: 0
@@ -30274,7 +30302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5774868537724840178, guid: fb616d2fc0c5909479d5f5628ce32a56, type: 3}
       propertyPath: message
-      value: "\u4E8C\u5C42"
+      value: floor2
       objectReference: {fileID: 0}
     - target: {fileID: 5774868537724840178, guid: fb616d2fc0c5909479d5f5628ce32a56, type: 3}
       propertyPath: yesButton
@@ -36499,7 +36527,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5774868537724840178, guid: fb616d2fc0c5909479d5f5628ce32a56, type: 3}
       propertyPath: message
-      value: "\u4E00\u5C42"
+      value: floor1
       objectReference: {fileID: 0}
     - target: {fileID: 5774868537724840178, guid: fb616d2fc0c5909479d5f5628ce32a56, type: 3}
       propertyPath: yesButton

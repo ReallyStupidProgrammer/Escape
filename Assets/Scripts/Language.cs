@@ -16,7 +16,7 @@ public class Language : MonoBehaviour {
 
     private string readJson(string filename) {
         FileStream fs = new FileStream(filename, FileMode.Open);
-        byte[] bytes = new byte[2048];
+        byte[] bytes = new byte[4096];
         int count = (int) fs.Length;
         fs.Read(bytes, 0, count);
         string str = new UTF8Encoding().GetString(bytes);

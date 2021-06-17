@@ -108,5 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f87e1765a61e0449b8e2efa5998bfd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: "\u7D2B\u8272\u94A5\u5319"
+  objectName: itemPurpleKey
   picture: {fileID: 21300000, guid: 9b36d4283eab24d48a52a78c06641e5a, type: 3}
+  collected: 0
+  keepCollider: 0
