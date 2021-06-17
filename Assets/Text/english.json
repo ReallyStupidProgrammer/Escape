@@ -1,0 +1,16 @@
+{
+    "title" :           "ESCAPE",
+    "subtitle" :        "a two-storied house",
+    "buttonStart" :     "Start",
+    "buttonSetting" :   "Settings",
+    "buttonHelp" :      "Help",
+    "buttonExit" :      "Exit",
+    "buttonBack" :      "back",
+    "buttonMenu" :      "Back to Menu",
+    "music" :           "MUSIC",
+    "language" :        "LANGUAGE",
+    "success" :         "MISSION COMPELETE!",
+    "acknowledge" :     "Made by: \n RealyStupidProgrammer \n \n Acknowledgement: \n Spinach \n Cyan",
+    "intro" :           "HOW TO PLAY",
+    "help" :            "1. To move, use ↑,↓,←,→ or a,s,w,d. \n\n2. To turn around, hold the right mouse button and move your mouse. \n\n3. To collect items, left click the item. \n\n4. To open the door, hold the left mouse button and move your mouse."
+}
