@@ -9,8 +9,8 @@ public class Language : MonoBehaviour {
     public static int languageIndex = 0;
     public static JSONObject language = null;
     private static string[] filenames = {
-        ".\\Assets\\Text\\english.json",
-        ".\\Assets\\Text\\chinese.json"
+        Application.streamingAssetsPath + "\\Text\\english.json",
+        Application.streamingAssetsPath + "\\Text\\chinese.json"
     };
     private static JSONObject[] languages = {null, null};
 
