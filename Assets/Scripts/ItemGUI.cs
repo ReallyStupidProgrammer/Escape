@@ -30,6 +30,10 @@ public class ItemGUI : MonoBehaviour {
             itemList[i].GetComponent<ItemOnList>().objectName = itemList[i + 1].GetComponent<ItemOnList>().objectName;
             itemList[i].GetComponent<ItemOnList>().index = i;
         }
+        itemList[lastItemIndex].GetComponent<ItemOnList>().picture = null;
+        itemList[lastItemIndex].GetComponent<ItemOnList>().itemName = "nothing";
+        itemList[lastItemIndex].GetComponent<ItemOnList>().objectName = "nothing";
+        itemList[lastItemIndex].GetComponent<ItemOnList>().index = -1;
         lastItemIndex --;
     }
 

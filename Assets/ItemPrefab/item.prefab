@@ -231,8 +231,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   picture: {fileID: 0}
-  itemName: 
-  objectName: 
+  itemName: nothing
+  objectName: nothing
   index: 0
 --- !u!1 &5632338011921400613
 GameObject:

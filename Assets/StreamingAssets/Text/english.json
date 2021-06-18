@@ -45,5 +45,7 @@
     "floor2" :          "Second Floor",
     "if":               "Do you want to go to ",
     "yes" :             "YES",
-    "no" :              "NO"   
+    "no" :              "NO",
+    "nothing" :         "",
+    "waterHint" :       "\t\t\t\t\t\tLatest Research \nDescription：\n  Black liquid that can reveal invisible ink.\nDisadvantage：\n  Lose efficacy if diluted by water.\nConclusion：\n  Project Terminated.\nApproach: \n  Pour into the toilet."   
 }

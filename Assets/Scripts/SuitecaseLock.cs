@@ -12,6 +12,7 @@ public class SuitecaseLock : MonoBehaviour {
     private IEnumerator open() {
         while (current > 0) {
             current -= speed * Time.deltaTime;
+            if (current < 0) break;
             gameObject.transform.Rotate(0, 0, -speed * Time.deltaTime, Space.Self);
             yield return null;
         }
