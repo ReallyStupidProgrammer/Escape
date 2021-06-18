@@ -103,14 +103,14 @@ public class Controller : MonoBehaviour {
         }
     }
 
-    private void woodBlankOperation(GameObject woodBlank) {
+    private void woodPlankOperation(GameObject woodPlank) {
         if (!Machine.machinePower) {
             message = Language.language["nopower"].str;
             messageColor = Color.red;
             return;
         }
-        if (woodBlank.layer == 0) woodBlank.GetComponent<WoodBlank>().get();
-        else woodBlank.GetComponent<WoodBlank>().put();
+        if (woodPlank.layer == 0) woodPlank.GetComponent<WoodPlank>().get();
+        else woodPlank.GetComponent<WoodPlank>().put();
     }
 
     private void handleOperation(GameObject handle) {
@@ -207,8 +207,8 @@ public class Controller : MonoBehaviour {
                 nailOperation(current);
             } else if (current.tag == "item") {
                 itemOperation(current);
-            } else if (current.name.IndexOf("WoodBlank") >= 0) {
-                woodBlankOperation(current);
+            } else if (current.name.IndexOf("WoodPlank") >= 0) {
+                woodPlankOperation(current);
             } else if (current.name.IndexOf("pianokey") >= 0) {
                 pianoKeyOperation(current);
             } else if (current.name.IndexOf("Lock") >= 0) {

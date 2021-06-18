@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WoodBlank : MonoBehaviour {
+public class WoodPlank : MonoBehaviour {
 
     public GameObject relatedWall = null;
 

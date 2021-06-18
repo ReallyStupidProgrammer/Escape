@@ -8,6 +8,9 @@ public class KeyHole : MonoBehaviour {
     public GameObject key;
     public bool pluged = false;
 
+    private void Start() {
+        lightControl = 0;
+    }
     public void plugin() {
         if (pluged) return;
         GameObject newKey = Instantiate(key,

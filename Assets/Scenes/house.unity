@@ -7564,7 +7564,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 146010047544186009, guid: cc94e8523e65e534aa1963cd1e2e753f, type: 3}
       propertyPath: m_Name
-      value: largeWoodBlank
+      value: largeWoodPlank
       objectReference: {fileID: 0}
     - target: {fileID: 692802205650644243, guid: cc94e8523e65e534aa1963cd1e2e753f, type: 3}
       propertyPath: m_RootOrder
@@ -11880,7 +11880,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3968638302179896169, guid: 4560605f42d30534ab41f954fe2982dd, type: 3}
       propertyPath: m_Name
-      value: smallWoodBlank
+      value: smallWoodPlank
       objectReference: {fileID: 0}
     - target: {fileID: 3968638302179896169, guid: 4560605f42d30534ab41f954fe2982dd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -21879,7 +21879,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -9188928774873467470, guid: c358dade18cb26b42a4c80b3eba35a6b, type: 3}
       propertyPath: m_Name
-      value: largeWoodBlank
+      value: largeWoodPlank
       objectReference: {fileID: 0}
     - target: {fileID: -9188928774873467470, guid: c358dade18cb26b42a4c80b3eba35a6b, type: 3}
       propertyPath: m_Layer
@@ -21963,7 +21963,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4507173428997149462, guid: c358dade18cb26b42a4c80b3eba35a6b, type: 3}
       propertyPath: m_Name
-      value: smallWoodBlank
+      value: smallWoodPlank
       objectReference: {fileID: 0}
     - target: {fileID: -4507173428997149462, guid: c358dade18cb26b42a4c80b3eba35a6b, type: 3}
       propertyPath: m_Layer
@@ -21983,7 +21983,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a47683f714ecaf64a9c92e65f014ea82, type: 2}
     - target: {fileID: -5071666673905285, guid: c358dade18cb26b42a4c80b3eba35a6b, type: 3}
       propertyPath: m_Name
-      value: smallWoodBlank
+      value: smallWoodPlank
       objectReference: {fileID: 0}
     - target: {fileID: -5071666673905285, guid: c358dade18cb26b42a4c80b3eba35a6b, type: 3}
       propertyPath: m_Layer
@@ -22015,7 +22015,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 91a43e7fe7649114db4f3a4d2fa13fe6, type: 2}
     - target: {fileID: 5219348026868672934, guid: c358dade18cb26b42a4c80b3eba35a6b, type: 3}
       propertyPath: m_Name
-      value: largeWoodBlank
+      value: largeWoodPlank
       objectReference: {fileID: 0}
     - target: {fileID: 5219348026868672934, guid: c358dade18cb26b42a4c80b3eba35a6b, type: 3}
       propertyPath: m_Layer
@@ -22210,7 +22210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f87e1765a61e0449b8e2efa5998bfd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: "\u5C0F\u6728\u677F"
+  objectName: itemSmallPlank
   picture: {fileID: 21300000, guid: 0b85fd86a1e925242b90abba4ae7069c, type: 3}
   collected: 0
   keepCollider: 1
@@ -22226,7 +22226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f87e1765a61e0449b8e2efa5998bfd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: "\u5927\u6728\u677F"
+  objectName: itemLargePlank
   picture: {fileID: 21300000, guid: ad943a4dacbefc047ad7ad73edb854c1, type: 3}
   collected: 0
   keepCollider: 1
@@ -22242,7 +22242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f87e1765a61e0449b8e2efa5998bfd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: "\u5C0F\u6728\u677F"
+  objectName: itemSmallPlank
   picture: {fileID: 21300000, guid: 0b85fd86a1e925242b90abba4ae7069c, type: 3}
   collected: 0
   keepCollider: 1
@@ -22258,7 +22258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f87e1765a61e0449b8e2efa5998bfd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: "\u5927\u6728\u677F"
+  objectName: itemLargePlank
   picture: {fileID: 21300000, guid: ad943a4dacbefc047ad7ad73edb854c1, type: 3}
   collected: 0
   keepCollider: 1

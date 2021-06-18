@@ -6,7 +6,7 @@ public class WallControlBoxDoor : MonoBehaviour {
 
     private IEnumerator coroutine;
     private float currentAngle = 0;
-    private float speed = 10f;
+    private float speed = 30f;
     private float maxAngle = 180;
 
     private IEnumerator rotate() {
