@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterMove : MonoBehaviour {
     public static float height = -1.8f;
+    public static bool moving = false;
     public int Speed = 3;
     private CharacterController controller;
 
@@ -13,8 +14,12 @@ public class CharacterMove : MonoBehaviour {
 
     void Update() {       
         var dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        if (dir != Vector3.zero) 
-            controller.Move(transform.rotation * dir * (Speed * Time.deltaTime));        
+        if (dir != Vector3.zero) {
+            controller.Move(transform.rotation * dir * (Speed * Time.deltaTime));
+            moving = true;
+        } else {
+            moving = false;
+        }       
         if (Input.GetMouseButton(1)) {
             float mouseX = Input.GetAxis("Mouse X") * 3;
             transform.Rotate(0, mouseX, 0, Space.World);
