@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,12 +14,19 @@ public class KeyRotate : MonoBehaviour {
         return Physics.Raycast((Ray) ray, out hit);
     }
 
+    private float dist(float a, float b, float c, float d) {
+        return (float) Math.Pow((Math.Pow((a - c), 2) + Math.Pow((b - d), 2)), 0.5);
+    }
+
     public void rotate() {
         getHit();
         float mouseX = hit.point.x;
         float mouseY = hit.point.y;
         float keyX = gameObject.transform.position.x;
         float keyY = gameObject.transform.position.y;
+        float d = dist(mouseX, mouseY, keyX, keyY);
+        print(d);
+        if (d < 0.05) return;
         double newAngle = System.Math.Atan2((double) (mouseX - keyX), (double) (mouseY - keyY)) * (180 / System.Math.PI);
         if (newAngle < 0) newAngle += 360;
         if (newAngle <= 1) {

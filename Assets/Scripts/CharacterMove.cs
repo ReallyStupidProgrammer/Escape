@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterMove : MonoBehaviour {
+    public static float height = -1.8f;
     public int Speed = 3;
     private CharacterController controller;
 
@@ -18,5 +19,6 @@ public class CharacterMove : MonoBehaviour {
             float mouseX = Input.GetAxis("Mouse X") * 3;
             transform.Rotate(0, mouseX, 0, Space.World);
         }
+        transform.position = new Vector3(transform.position.x, height, transform.position.z);
     }
 }

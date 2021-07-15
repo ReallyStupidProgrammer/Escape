@@ -28,9 +28,10 @@ public class Transmit : MonoBehaviour
     public void transmit() {
         Controller.message = Language.language["goto"].str + Language.language[message].str;
         Controller.messageColor = Color.green;
-        player.transform.position = new Vector3(player.transform.position.x, 
-                                                player.transform.position.y + upDown * 26, 
-                                                player.transform.position.z);
+        // player.transform.position = new Vector3(player.transform.position.x, 
+        //                                         player.transform.position.y + upDown * 26, 
+        //                                         player.transform.position.z);
+        CharacterMove.height += upDown * 26;
     }
 
     private void Start() {
