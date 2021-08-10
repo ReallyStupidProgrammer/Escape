@@ -25,7 +25,6 @@ public class KeyRotate : MonoBehaviour {
         float keyX = gameObject.transform.position.x;
         float keyY = gameObject.transform.position.y;
         float d = dist(mouseX, mouseY, keyX, keyY);
-        print(d);
         if (d < 0.05) return;
         double newAngle = System.Math.Atan2((double) (mouseX - keyX), (double) (mouseY - keyY)) * (180 / System.Math.PI);
         if (newAngle < 0) newAngle += 360;

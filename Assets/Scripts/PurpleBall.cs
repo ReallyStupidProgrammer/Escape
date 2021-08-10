@@ -9,7 +9,7 @@ public class PurpleBall : MonoBehaviour {
 
     private void Update() {
         if (dropped) return;
-        if (basin.layer == 0) {
+        if (basin.layer == 0 && Pipe.pipeDestroyed) {
             dropped = true;
             gameObject.GetComponent<Rigidbody>().useGravity = true;
         }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -160,12 +161,20 @@ public class Controller : MonoBehaviour {
         pusher.GetComponent<Pusher>().push();
     }
 
+    private float dist(float a, float b, float c, float d) {
+        return (float) Math.Pow((Math.Pow((a - c), 2) + Math.Pow((b - d), 2)), 0.5);
+    }
+
+
     private void Update() {
         if (Input.GetMouseButtonDown(0)) {
             if (!getHit()) return;
             current = hit.collider.gameObject;
         }
         if (current != null) {
+            float d = dist(current.transform.position.x, current.transform.position.z, 
+                           transform.position.x, transform.position.z);
+            print(d);
             if (current.name.IndexOf("Door") >= 0 
             || current.name.IndexOf("handle") >= 0) {
                 rotateOperation(current);
