@@ -165,16 +165,15 @@ public class Controller : MonoBehaviour {
         return (float) Math.Pow((Math.Pow((a - c), 2) + Math.Pow((b - d), 2)), 0.5);
     }
 
-
     private void Update() {
         if (Input.GetMouseButtonDown(0)) {
             if (!getHit()) return;
             current = hit.collider.gameObject;
         }
         if (current != null) {
-            float d = dist(current.transform.position.x, current.transform.position.z, 
+            float d = dist(hit.point.x, hit.point.z, 
                            transform.position.x, transform.position.z);
-            print(d);
+            if (d > 2.4) return;
             if (current.name.IndexOf("Door") >= 0 
             || current.name.IndexOf("handle") >= 0) {
                 rotateOperation(current);
