@@ -158,6 +158,9 @@ public class Controller : MonoBehaviour {
     }
 
     private void pusherOperation(GameObject pusher) {
+        float d = dist(hit.point.x, hit.point.z, 
+                       transform.position.x, transform.position.z);
+        if (d > 1.5) return;
         pusher.GetComponent<Pusher>().push();
     }
 
@@ -171,9 +174,7 @@ public class Controller : MonoBehaviour {
             current = hit.collider.gameObject;
         }
         if (current != null) {
-            float d = dist(hit.point.x, hit.point.z, 
-                           transform.position.x, transform.position.z);
-            if (d > 2.4) return;
+            // if (d > 2.4) return;
             if (current.name.IndexOf("Door") >= 0 
             || current.name.IndexOf("handle") >= 0) {
                 rotateOperation(current);
