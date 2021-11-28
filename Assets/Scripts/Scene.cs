@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Scene : MonoBehaviour {
     public void start() {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(5);
     }
 
     public void menu() {
@@ -22,6 +22,10 @@ public class Scene : MonoBehaviour {
 
     public void help() {
         SceneManager.LoadSceneAsync(4);
+    }
+
+    public void begin() {
+        SceneManager.LoadSceneAsync(1);
     }
 
     public void quit() {
