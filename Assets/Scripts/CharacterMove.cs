@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterMove : MonoBehaviour {
-    public static float height = -1.8f;
-    public static bool moving = false;
+    public static float height;
+    public static bool moving;
     public int Speed = 3;
     private CharacterController controller;
 
     void Start() {
         controller = gameObject.GetComponent<CharacterController>();
+        moving = false;
+        height = -1.8f;
     }
 
     void Update() {       

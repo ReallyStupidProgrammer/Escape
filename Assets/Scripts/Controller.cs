@@ -7,6 +7,8 @@ public class Controller : MonoBehaviour {
 
     public static string message;
     public static Color messageColor;
+
+    public GameObject sounds;
     private RaycastHit hit;
     private GameObject current;
 
@@ -30,9 +32,11 @@ public class Controller : MonoBehaviour {
                 keyName = key.name;
             }
             if (Item.selectedItemName != keyName) {
+                sounds.GetComponent<Sounds>().playSound(4);
                 message = Language.language["locked"].str;
                 messageColor = Color.red;
             } else {
+                sounds.GetComponent<Sounds>().playSound(0);
                 message = Language.language["unlocked"].str;
                 messageColor = Color.green;
                 door.tag = "unlocked";
@@ -78,6 +82,7 @@ public class Controller : MonoBehaviour {
 
     private void itemOperation(GameObject item) {
         if (item.GetComponent<Item>().collected) return;
+        sounds.GetComponent<Sounds>().playSound(2);
         item.GetComponent<Item>().collect();
         message = Language.language["getItem"].str + "\n" 
                 + Language.language[item.GetComponent<Item>().objectName].str;
@@ -110,6 +115,7 @@ public class Controller : MonoBehaviour {
             messageColor = Color.red;
             return;
         }
+        sounds.GetComponent<Sounds>().playSound(3);
         if (woodPlank.layer == 0) woodPlank.GetComponent<WoodPlank>().get();
         else woodPlank.GetComponent<WoodPlank>().put();
     }
@@ -125,6 +131,7 @@ public class Controller : MonoBehaviour {
     }
 
     private void pipeOperation(GameObject pipe) {
+        if (pipe.GetComponent<Pipe>() == null) return;
         if ((pipe.GetComponent<Pipe>().CDPipe 
         && Item.selectedItemName == "CD")
         && Pipe.pipeDestroyed) {
@@ -146,6 +153,7 @@ public class Controller : MonoBehaviour {
     }
 
     private void lockOperation(GameObject suitecaseLock) {
+        sounds.GetComponent<Sounds>().playSound(1);
         suitecaseLock.GetComponent<SuitecaseLock>().unlock();
     }
 
