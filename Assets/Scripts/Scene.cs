@@ -25,6 +25,11 @@ public class Scene : MonoBehaviour {
     }
 
     public void begin() {
+        GameLoading.saved = false;
+        SceneManager.LoadSceneAsync(1);
+    }
+
+    public void continueGame() {
         SceneManager.LoadSceneAsync(1);
     }
 
