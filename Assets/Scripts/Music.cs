@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Music : MonoBehaviour {
 
-    public static float volume = 1;
+    public static float volume = 0.5f;
     public AudioClip bgm;
     public AudioClip victory;
     private AudioSource back;
 
     public void initialize() {
         back = this.GetComponent<AudioSource>();
-        back.volume = 1;
+        back.volume = volume;
         DontDestroyOnLoad(this.gameObject); 
     }
 
