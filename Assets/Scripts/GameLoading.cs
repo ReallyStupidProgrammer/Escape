@@ -38,7 +38,7 @@ public class GameLoading : MonoBehaviour {
     }
 
     public static void saveAll() {
-        // saved = true;
+        saved = true;
         // foreach (GameObject temp in Resources.FindObjectsOfTypeAll(typeof(GameObject))) {
         //     GameObject current = temp.gameObject;
         //     if (current.name == "Canvas") continue;
