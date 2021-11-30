@@ -34,18 +34,30 @@ public class Water : MonoBehaviour {
 
     private void Update() {
         int upDown = checkSwitch();
+        bool checkSound = (gameObject.GetComponent<WaterSound>() != null);
         if (invisibleOrMove) {
-            if (upDown > 0) Item.changeLayer(gameObject, 0);
-            else Item.changeLayer(gameObject, 8);
+            if (upDown > 0 && gameObject.layer == 8) {
+                if (checkSound) gameObject.GetComponent<WaterSound>().playSound();
+                Item.changeLayer(gameObject, 0);
+            } else if (upDown == 0 && gameObject.layer == 0) {
+                if (checkSound) gameObject.GetComponent<WaterSound>().stopPlay();
+                Item.changeLayer(gameObject, 8);
+            }
         } else {
             float currentPosition = gameObject.transform.localPosition.y;
+
+            if (checkSound)
+                if (upDown != 0) gameObject.GetComponent<WaterSound>().playSound();
+                else gameObject.GetComponent<WaterSound>().stopPlay();
+
             if (upDown > 0 && currentPosition < upPosition) {
                 gameObject.transform.Translate(0, upDown * speed * Time.deltaTime, 0, Space.World);
-            }
+            } 
             if (upDown < 0 && currentPosition > downPosition) {
                 gameObject.transform.Translate(0, upDown * speed * Time.deltaTime, 0, Space.World);
             }
         }
+
     }
 
 }

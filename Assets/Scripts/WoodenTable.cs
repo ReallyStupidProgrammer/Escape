@@ -7,6 +7,7 @@ public class WoodenTable : MonoBehaviour {
     public GameObject slideLeftDoor = null;
     public GameObject slideRightDoor = null;
     public GameObject platform = null;
+    public GameObject motorSound = null;
     public float maxDoorAmount = 0;
     public float maxPlatformAmount = 0;
     private bool opened = false;
@@ -17,6 +18,7 @@ public class WoodenTable : MonoBehaviour {
     private float platformAmount = 0;
 
     private IEnumerator move() {
+        motorSound.GetComponent<Sounds>().playSound(0);
         while (true) {
             bool flag = true;
             if (leftDoorAmount + doorSpeed * Time.deltaTime < maxDoorAmount) {
@@ -34,6 +36,7 @@ public class WoodenTable : MonoBehaviour {
             yield return null;
         }
         StopCoroutine(coroutine);
+        motorSound.GetComponent<Sounds>().stopPlay();
     }
 
     private void open() {

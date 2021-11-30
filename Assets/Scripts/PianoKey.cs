@@ -42,10 +42,11 @@ public class PianoKey : MonoBehaviour {
         StartCoroutine(coroutine);
     }
 
-    public void push() {
+    public void push(GameObject pianoSounds) {
+        pianoSounds.GetComponent<Sounds>().playSound(keyNum);
         pianoKeyDown();
         if (correct) return;
-        if (PianoKey.correctPwd[PianoKey.currentPos] == gameObject.GetComponent<PianoKey>().keyNum) {
+        if (PianoKey.correctPwd[PianoKey.currentPos] == keyNum) {
             currentPos += 1;
         } else {
             currentPos = 0;

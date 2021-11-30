@@ -11,7 +11,7 @@ public class CharacterMove : MonoBehaviour {
     void Start() {
         controller = gameObject.GetComponent<CharacterController>();
         moving = false;
-        height = -1.8f;
+        height = 24.2f;
     }
 
     void Update() {       

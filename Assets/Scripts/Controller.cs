@@ -9,6 +9,7 @@ public class Controller : MonoBehaviour {
     public static Color messageColor;
 
     public GameObject sounds;
+    public GameObject pianoSounds;
     private RaycastHit hit;
     private GameObject current;
 
@@ -52,17 +53,20 @@ public class Controller : MonoBehaviour {
         if (drawer.tag == "unlocked") {
             drawer.GetComponent<Movement>().move();
         } else {
+            sounds.GetComponent<Sounds>().playSound(4);
             message = Language.language["locked"].str;
             messageColor = Color.red;
         }
     }
 
     private void pwdOperation(GameObject pwd) {
+        sounds.GetComponent<Sounds>().playSound(5);
         pwd.GetComponent<Password>().add();
     }
 
     private void computerOperation(GameObject computer) {
         if (computer.tag == "NoPower") {
+            sounds.GetComponent<Sounds>().playSound(4);
             message = Language.language["nopower"].str;
             messageColor = Color.red;
         }
@@ -92,6 +96,7 @@ public class Controller : MonoBehaviour {
     private void coverOperation(GameObject cover) {
         if (cover.tag == "unlocked") cover.GetComponent<Cover>().open();
         else {
+            sounds.GetComponent<Sounds>().playSound(4);
             message = Language.language["locked"].str;
             messageColor = Color.red;
         }
@@ -99,6 +104,7 @@ public class Controller : MonoBehaviour {
 
     private void screenOperation(GameObject screen) {
         if (screen.transform.parent.gameObject.tag == "NoPower") {
+            sounds.GetComponent<Sounds>().playSound(4);
             message = Language.language["nopower"].str;
             messageColor = Color.red;
         }
@@ -111,6 +117,7 @@ public class Controller : MonoBehaviour {
 
     private void woodPlankOperation(GameObject woodPlank) {
         if (!Machine.machinePower) {
+            sounds.GetComponent<Sounds>().playSound(4);
             message = Language.language["nopower"].str;
             messageColor = Color.red;
             return;
@@ -149,7 +156,7 @@ public class Controller : MonoBehaviour {
     }
 
     private void pianoKeyOperation(GameObject pianoKey) {
-        pianoKey.GetComponent<PianoKey>().push();
+        pianoKey.GetComponent<PianoKey>().push(pianoSounds);
     }
 
     private void lockOperation(GameObject suitecaseLock) {
@@ -213,6 +220,7 @@ public class Controller : MonoBehaviour {
                 screenOperation(current);
             } else if (current.name.IndexOf("machine") >= 0) {
                 if (!Machine.machinePower) {
+                    sounds.GetComponent<Sounds>().playSound(4);
                     message = Language.language["nopower"].str;
                     messageColor = Color.red;
                 }   

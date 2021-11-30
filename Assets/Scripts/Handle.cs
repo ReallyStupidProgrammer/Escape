@@ -9,6 +9,7 @@ public class Handle : MonoBehaviour {
 
     public void flush() {
         if (gameObject.GetComponent<Switch>().state) return;
+        gameObject.GetComponent<AudioSource>().Play();
         gameObject.GetComponent<Switch>().state = true;
         blackWater.GetComponent<Water>().changeMat(waterMat);
         blackWater.GetComponent<BlackWater>().flag = true;

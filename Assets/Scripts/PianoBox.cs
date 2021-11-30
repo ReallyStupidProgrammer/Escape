@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PianoBox : MonoBehaviour {
 
+    public GameObject motorSound;
     private bool opened = false;
     private IEnumerator coroutine;
     private float currentPos = 0;
@@ -11,6 +12,7 @@ public class PianoBox : MonoBehaviour {
     private float speed = -0.1f;
 
     private IEnumerator openBox() {
+        motorSound.GetComponent<Sounds>().playSound(0);
         while (true) {
             gameObject.transform.Translate(speed * Time.deltaTime, 0, 0, Space.Self);
             currentPos += speed * Time.deltaTime;
@@ -18,6 +20,7 @@ public class PianoBox : MonoBehaviour {
             yield return null;
         }
         StopCoroutine(coroutine);
+        motorSound.GetComponent<Sounds>().stopPlay();
     }
 
     private void open() {

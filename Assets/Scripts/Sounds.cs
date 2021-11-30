@@ -14,4 +14,9 @@ public class Sounds : MonoBehaviour {
         sound.Play();
     }
 
+    public void stopPlay() {
+        AudioSource sound = gameObject.GetComponent<AudioSource>();
+        sound.Stop();
+    }
+
 }
