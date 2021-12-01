@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Music : MonoBehaviour {
 
-    public static float volume = 0.5f;
+    public static float volume = 0.3f;
     public AudioClip bgm;
     public AudioClip victory;
     private AudioSource back;

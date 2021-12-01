@@ -47,7 +47,7 @@ public class Water : MonoBehaviour {
             float currentPosition = gameObject.transform.localPosition.y;
 
             if (checkSound)
-                if (upDown != 0) gameObject.GetComponent<WaterSound>().playSound();
+                if (upDown < 0 && currentPosition > downPosition) gameObject.GetComponent<WaterSound>().playSound();
                 else gameObject.GetComponent<WaterSound>().stopPlay();
 
             if (upDown > 0 && currentPosition < upPosition) {
