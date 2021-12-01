@@ -5,8 +5,8 @@ using UnityEngine;
 public class CharacterRotate : MonoBehaviour {
 
     void Update() {
-        if (CharacterMove.moving) return;
         if (Input.GetMouseButton(1)) {
+            // if (CharacterMove.moving) return;
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             float mouseY = Input.GetAxis("Mouse Y") * 2;

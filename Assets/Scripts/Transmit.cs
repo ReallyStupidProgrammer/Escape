@@ -11,6 +11,7 @@ public class Transmit : MonoBehaviour
     public GameObject player;
     public GameObject notification;
     public GameObject yesButton;
+    public GameObject transmitSound;
     private bool flag = false;
     private float currentX;
     private float currentY;

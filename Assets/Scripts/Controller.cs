@@ -109,6 +109,7 @@ public class Controller : MonoBehaviour {
             messageColor = Color.red;
         }
         if (Item.selectedItemName == screen.GetComponent<Screen>().relatedItem.name) {
+            sounds.GetComponent<Sounds>().playSound(7);
             screen.GetComponent<Screen>().crash();
             ItemGUI.updateItemList(Item.selectedItemIndex);
             ItemGUI.resetSelected();
